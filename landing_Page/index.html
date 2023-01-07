@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="TH2.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="header">
@@ -99,7 +99,7 @@
             height="20"
             icon="material-symbols:search-rounded"
           ></iconify-icon>
-          <div class="btn">Get free trial</div>
+          <a href="#" class="btn">Get free trial</a>
           <iconify-icon
             class="icon-after"
             width="20"
@@ -125,10 +125,10 @@
     </div>
     <div class="main">
       <div class="container">
-        <div class="hompepage_container">
+        <div class="homepage_container">
           <div class="slp_row">
             <div class="slp-flex slp-align-items-center slp-col-md-6">
-              <div class="homepage_title">
+              <div class="homepage-hero__title-column">
                 <h1 class="title slp-text-heading-bold">Software. Faster</h1>
                 <h2 class="subtitle slp-text-body1">
                   From planning to production, GitLab brings teams together to
@@ -136,15 +136,107 @@
                   increase developer productivity.
                 </h2>
                 <div class="slp-mb-16 slp-mt-s24">
-                  <a href="#" class="slp-btn-slp-mr-8 slp-btn-primary"
+                  <a href="#" class="slp-btn slp-mr-8 slp-btn-primary"
                     >Get tree trial</a
                   >
                   <button type="button" class="slp-btn slp-btn-tertiary">
                     What is GitLab?
-                    <img src="#" />
+                    <img src="img/icon1.svg" />
                   </button>
                 </div>
               </div>
+            </div>
+            <div
+              class="homepage-hero_media-column slp-flex slp-align-items-center slp-col-md-6"
+            >
+              <div class="card">
+                <p class="desktop slp-text-heading5-bold">
+                  "DevSecOps platform"
+                </p>
+                <div class="card-img">
+                  <div class="card-img__image">
+                    <img src="/img/h1.png" alt="Brand img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div
+              class="modal__backdrop modal__backdrop--light"
+              style="display: none"
+            >
+              <div class="modal">
+                <header class="modal__header">
+                  <button type="button" class="btn btn__close">
+                    <svg width="32" height="32" viewBox="0 0 32 32"></svg>
+                  </button>
+                </header>
+              </div> -->
+            </div>
+            <div class="customer-logos">
+              <div class="customer-logos__companies slp-flex">
+                <h2 class="slp-my-24 customer-logos__trusted-by slp-text-heading5">"Trusted By"</h2>
+                <a href="#">
+                  <img src="/img/icon2.svg">
+                </a>
+                <a href="#">
+                  <img src="img/icon3.svg">
+                </a>
+                <a href="#">
+                  <img src="img/icon4.svg">
+                </a>
+                <a href="#">
+                  <img src="img/icon5.svg">
+                </a>
+                <a href="#">
+                  <img src="img/icon6.svg">
+                </a>
+                <a href="#">
+                  <img src="img/icon7.svg">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="slp-partial-charcoal-background wrapper">
+          <div class="container">
+            <div class="featured-content">
+              <a href="#" class="featured-content__card">
+                <div class="featured-content__text">
+                  <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
+                  <h3 class="slp-mb-8 slp-text-heading5-bold">Get started with Gitlab</h3>
+                  <p class="slp-mb-46 decription slp-text-body2">New to GitLab? Explore these resources to help you get the most out of GitLab and know what to expect along the way.</p>
+                </div>
+                <div>
+                  <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
+                    <span class="slp-text-body1-bold">Explore resources</span>
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="featured-content__card">
+                <div class="featured-content__text">
+                  <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
+                  <h3 class="slp-mb-8 slp-text-heading5-bold">2022 Global DevSecOps Survey</h3>
+                  <p class="slp-mb-46 decription slp-text-body2">See what we learn from over 5,000 DevOps professionals about automation, security, AI,and more</p>
+                  <div>
+                    <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
+                      <span class="slp-text-body1-bold">Read the survey</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="featured-content__card">
+                <div class="featured-content__text">
+                  <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
+                  <h3 class="slp-mb-8 slp-text-heading5-bold">See what you could save</h3>
+                  <p class="slp-mb-46 decription slp-text-body2">Calculate the cost of your current toolchain and how much your organization could you save by switching to the One DevOps Platform </p>
+                  <div>
+                    <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
+                      <span class="slp-text-body1-bold">Try the calculator</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
