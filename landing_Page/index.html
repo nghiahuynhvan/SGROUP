@@ -1,166 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="navbar">
-        <div class="navbar__left">
-          <div class="logo">
-            <svg
-              data-v-0d71b08a=""
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-labelledby="tanukiHomeTablet"
-              data-v-2271f886=""
-            >
-              <title id="tanukiHomeTablet">GitLab home page</title>
-              <path
-                d="M31.4618 12.7787L31.417 12.6641L27.0667 1.31308C26.9783 1.09046 26.8218 0.90145 26.6197 0.773028C26.416 0.644476 26.1775 0.582308 25.937 0.595107C25.6965 0.607906 25.4659 0.695039 25.277 0.844481C25.0899 0.994513 24.955 1.1998 24.8915 1.43106L21.9503 10.4324H10.0509L7.10976 1.43106C7.04625 1.1998 6.91133 0.994513 6.72425 0.844481C6.53618 0.694035 6.30572 0.606246 6.06523 0.593431C5.82473 0.580616 5.58625 0.64342 5.38326 0.773028C5.18023 0.900924 5.02312 1.09005 4.9346 1.31308L0.579314 12.679L0.534448 12.792C-0.0907536 14.429 -0.167604 16.2247 0.315452 17.9091C0.798508 19.5935 1.81536 21.0756 3.21309 22.1324L3.22971 22.144L3.26793 22.1739L9.90306 27.1407L13.1832 29.625L15.1773 31.1354C15.4115 31.3124 15.6971 31.4082 15.9907 31.4082C16.2842 31.4082 16.5698 31.3124 16.8041 31.1354L18.7981 29.625L22.0799 27.1407L28.7533 22.144L28.7715 22.1307C30.174 21.0749 31.1949 19.5916 31.6802 17.9045C32.1656 16.2175 32.0889 14.4184 31.4618 12.7787Z"
-                fill="#E24329"
-              ></path>
-              <path
-                d="M31.462 12.7787L31.4172 12.6641C29.2955 13.1013 27.2962 14.0005 25.5614 15.2978L16.0083 22.5378C19.2652 25.0005 22.1001 27.1407 22.1001 27.1407L28.7734 22.144L28.7917 22.1307C30.1907 21.0723 31.2076 19.5877 31.6893 17.9009C32.171 16.214 32.0912 14.4163 31.462 12.7787Z"
-                fill="#FC6D26"
-              ></path>
-              <path
-                d="M9.9082 27.1407L13.1834 29.625L15.1774 31.1354C15.4117 31.3124 15.6972 31.4082 15.9908 31.4082C16.2844 31.4082 16.57 31.3124 16.8042 31.1354L18.7982 29.625L22.0801 27.1407C22.0801 27.1407 19.2452 25.0005 15.9883 22.5378L9.9082 27.1407Z"
-                fill="#FCA326"
-              ></path>
-              <path
-                d="M6.43513 15.3045C4.70076 14.0067 2.70123 13.108 0.579333 12.6724L0.534467 12.7854C-0.0923403 14.4232 -0.170036 16.2203 0.313079 17.9061C0.796194 19.5919 1.81396 21.0751 3.21311 22.1324L3.22973 22.144L3.26795 22.1739L9.90307 27.1407L16.0081 22.5378L6.43513 15.3045Z"
-                fill="#FC6D26"
-              ></path>
-            </svg>
-          </div>
-          <div class="menu">
-            <a href="#">Platform</a>
-            <a href="#">Solutions</a>
-            <a href="#">Pricing</a>
-            <a href="#">Resources</a>
-            <a href="#">Company</a>
-            <a href="#">Contact Us</a>
-          </div>
-        </div>
-        <div class="navbar__left-mobile">
-          <iconify-icon
-            class=""
-            width="20"
-            height="20"
-            icon="material-symbols:search-rounded"
-          ></iconify-icon>
-        </div>
-        <div class="navbar__middle">
-          <div class="logo">
-            <svg
-              data-v-0d71b08a=""
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-labelledby="tanukiHomeTablet"
-              data-v-2271f886=""
-            >
-              <title id="tanukiHomeTablet">GitLab home page</title>
-              <path
-                d="M31.4618 12.7787L31.417 12.6641L27.0667 1.31308C26.9783 1.09046 26.8218 0.90145 26.6197 0.773028C26.416 0.644476 26.1775 0.582308 25.937 0.595107C25.6965 0.607906 25.4659 0.695039 25.277 0.844481C25.0899 0.994513 24.955 1.1998 24.8915 1.43106L21.9503 10.4324H10.0509L7.10976 1.43106C7.04625 1.1998 6.91133 0.994513 6.72425 0.844481C6.53618 0.694035 6.30572 0.606246 6.06523 0.593431C5.82473 0.580616 5.58625 0.64342 5.38326 0.773028C5.18023 0.900924 5.02312 1.09005 4.9346 1.31308L0.579314 12.679L0.534448 12.792C-0.0907536 14.429 -0.167604 16.2247 0.315452 17.9091C0.798508 19.5935 1.81536 21.0756 3.21309 22.1324L3.22971 22.144L3.26793 22.1739L9.90306 27.1407L13.1832 29.625L15.1773 31.1354C15.4115 31.3124 15.6971 31.4082 15.9907 31.4082C16.2842 31.4082 16.5698 31.3124 16.8041 31.1354L18.7981 29.625L22.0799 27.1407L28.7533 22.144L28.7715 22.1307C30.174 21.0749 31.1949 19.5916 31.6802 17.9045C32.1656 16.2175 32.0889 14.4184 31.4618 12.7787Z"
-                fill="#E24329"
-              ></path>
-              <path
-                d="M31.462 12.7787L31.4172 12.6641C29.2955 13.1013 27.2962 14.0005 25.5614 15.2978L16.0083 22.5378C19.2652 25.0005 22.1001 27.1407 22.1001 27.1407L28.7734 22.144L28.7917 22.1307C30.1907 21.0723 31.2076 19.5877 31.6893 17.9009C32.171 16.214 32.0912 14.4163 31.462 12.7787Z"
-                fill="#FC6D26"
-              ></path>
-              <path
-                d="M9.9082 27.1407L13.1834 29.625L15.1774 31.1354C15.4117 31.3124 15.6972 31.4082 15.9908 31.4082C16.2844 31.4082 16.57 31.3124 16.8042 31.1354L18.7982 29.625L22.0801 27.1407C22.0801 27.1407 19.2452 25.0005 15.9883 22.5378L9.9082 27.1407Z"
-                fill="#FCA326"
-              ></path>
-              <path
-                d="M6.43513 15.3045C4.70076 14.0067 2.70123 13.108 0.579333 12.6724L0.534467 12.7854C-0.0923403 14.4232 -0.170036 16.2203 0.313079 17.9061C0.796194 19.5919 1.81396 21.0751 3.21311 22.1324L3.22973 22.144L3.26795 22.1739L9.90307 27.1407L16.0081 22.5378L6.43513 15.3045Z"
-                fill="#FC6D26"
-              ></path>
-            </svg>
-          </div>
-        </div>
-        <div class="navbar__right">
-          <iconify-icon
-            class="icon"
-            width="20"
-            height="20"
-            icon="material-symbols:search-rounded"
-          ></iconify-icon>
-          <a href="#" class="btn">Get free trial</a>
-          <iconify-icon
-            class="icon-after"
-            width="20"
-            height="20"
-            icon="ri:user-3-line"
-          ></iconify-icon>
-          <iconify-icon
-            class="icon-after"
-            width="20"
-            height="20"
-            icon="material-symbols:search-rounded"
-          ></iconify-icon>
-          <iconify-icon
-            class="icon-after"
-            width="20"
-            height="20"
-            icon="fluent:line-horizontal-3-20-filled"
-          ></iconify-icon>
 
-          <a href="#" class="login"> Sign in </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="navbar">
+      <div class="navbar__left">
+        <div class="logo">
+          <svg data-v-0d71b08a="" width="32" height="32" viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tanukiHomeTablet" data-v-2271f886="">
+            <title id="tanukiHomeTablet">GitLab home page</title>
+            <path
+              d="M31.4618 12.7787L31.417 12.6641L27.0667 1.31308C26.9783 1.09046 26.8218 0.90145 26.6197 0.773028C26.416 0.644476 26.1775 0.582308 25.937 0.595107C25.6965 0.607906 25.4659 0.695039 25.277 0.844481C25.0899 0.994513 24.955 1.1998 24.8915 1.43106L21.9503 10.4324H10.0509L7.10976 1.43106C7.04625 1.1998 6.91133 0.994513 6.72425 0.844481C6.53618 0.694035 6.30572 0.606246 6.06523 0.593431C5.82473 0.580616 5.58625 0.64342 5.38326 0.773028C5.18023 0.900924 5.02312 1.09005 4.9346 1.31308L0.579314 12.679L0.534448 12.792C-0.0907536 14.429 -0.167604 16.2247 0.315452 17.9091C0.798508 19.5935 1.81536 21.0756 3.21309 22.1324L3.22971 22.144L3.26793 22.1739L9.90306 27.1407L13.1832 29.625L15.1773 31.1354C15.4115 31.3124 15.6971 31.4082 15.9907 31.4082C16.2842 31.4082 16.5698 31.3124 16.8041 31.1354L18.7981 29.625L22.0799 27.1407L28.7533 22.144L28.7715 22.1307C30.174 21.0749 31.1949 19.5916 31.6802 17.9045C32.1656 16.2175 32.0889 14.4184 31.4618 12.7787Z"
+              fill="#E24329"></path>
+            <path
+              d="M31.462 12.7787L31.4172 12.6641C29.2955 13.1013 27.2962 14.0005 25.5614 15.2978L16.0083 22.5378C19.2652 25.0005 22.1001 27.1407 22.1001 27.1407L28.7734 22.144L28.7917 22.1307C30.1907 21.0723 31.2076 19.5877 31.6893 17.9009C32.171 16.214 32.0912 14.4163 31.462 12.7787Z"
+              fill="#FC6D26"></path>
+            <path
+              d="M9.9082 27.1407L13.1834 29.625L15.1774 31.1354C15.4117 31.3124 15.6972 31.4082 15.9908 31.4082C16.2844 31.4082 16.57 31.3124 16.8042 31.1354L18.7982 29.625L22.0801 27.1407C22.0801 27.1407 19.2452 25.0005 15.9883 22.5378L9.9082 27.1407Z"
+              fill="#FCA326"></path>
+            <path
+              d="M6.43513 15.3045C4.70076 14.0067 2.70123 13.108 0.579333 12.6724L0.534467 12.7854C-0.0923403 14.4232 -0.170036 16.2203 0.313079 17.9061C0.796194 19.5919 1.81396 21.0751 3.21311 22.1324L3.22973 22.144L3.26795 22.1739L9.90307 27.1407L16.0081 22.5378L6.43513 15.3045Z"
+              fill="#FC6D26"></path>
+          </svg>
         </div>
-      </div>
-    </div>
-    <div class="main">
-      <div class="container">
-        <div class="homepage_container">
-          <div class="slp_row">
-            <div class="slp-flex slp-align-items-center slp-col-md-6">
-              <div class="homepage-hero__title-column">
-                <h1 class="title slp-text-heading-bold">Software. Faster.</h1>
-                <h2 class="subtitle slp-text-body1">
-                  From planning to production, GitLab brings teams together to
-                  shorten cycle times, reduce costs, strengthen security, and
-                  increase developer productivity.
-                </h2>
-                <div class="slp-mb-16 slp-mt-s24">
-                  <a href="#" class="slp-btn slp-mr-8 slp-btn-primary"
-                    >Get tree trial</a
-                  >
-                  <button type="button" class="slp-btn slp-btn-tertiary">
-                    What is GitLab?
-                    <img src="img/icon1.svg" />
-                  </button>
-                </div>
-              </div>
+        <div class="menu">
+          <a href="#" class="menu-item">
+            Platform
+            <div class="menu-item-icon">
+              <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" class="menu-hide-icon"></iconify-icon>
             </div>
-            <div
-              class="homepage-hero_media-column slp-flex slp-align-items-center slp-col-md-6"
-            >
-              <div class="card">
-                <p class="desktop slp-text-heading5-bold">
-                  DevSecOps platform
-                </p>
-                <div class="card-img">
-                  <div class="card-img__image">
-                    <img src="/img/h1.png" alt="Brand img" />
+          </a>
+          <a href="#" class="menu-item">
+            Solutions
+            <div class="menu-item-icon">
+              <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" class="menu-hide-icon"></iconify-icon>
+            </div>
+            <div class="nav-dropdown-list">
+              <div class="nav-dropdown__left-side">
+                <div class="nav-dropdown__left-side__container">
+                  <div class="nav-dropdown-categories">
+                    <div class="nav-dropdown-cate-list">
+                      <div class="nav-dropdown-list-title">By use case</div>
+                      <div class="nav-dropdown-item">Digital transformation </div>
+                      <div class="nav-dropdown-item">Security and governance </div>
+                      <div class="nav-dropdown-item">Automated software delivery </div>
+                      <div class="nav-dropdown-item">Agile development </div>
+                      <div class="nav-dropdown-item">Cloud transformation </div>
+                    </div>
+                  </div>
+                  <div class="nav-dropdown-categories">
+                    <div class="nav-dropdown-cate-list">
+                      <div class="nav-dropdown-list-title">By use case</div>
+                      <div class="nav-dropdown-item">Digital transformation </div>
+                      <div class="nav-dropdown-item">Security and governance </div>
+                      <div class="nav-dropdown-item">Automated software delivery </div>
+                      <div class="nav-dropdown-item">Agile development </div>
+                      <div class="nav-dropdown-item">Cloud transformation </div>
+                    </div>
+                  </div>
+                  <div class="nav-dropdown-categories ">
+                    <div class="nav-dropdown-cate-list margin-bottom-nav-list">
+                      <div class="nav-dropdown-list-title">By company size</div>
+                      <div class="nav-dropdown-item">Enterprise</div>
+                      <div class="nav-dropdown-item">Small business </div>
+                    </div>
+                    <div class="nav-dropdown-cate-list ">
+                      <div class="nav-dropdown-list-title">By industry</div>
+                      <div class="nav-dropdown-item">Public sector</div>
+                      <div class="nav-dropdown-item">Education</div>
+                      <div class="nav-dropdown-item">Financial services</div>
+                    </div>
                   </div>
                 </div>
+                <div class="nav-dropdown__left-side__bottom">
+                  <span class="text-bottom">View all solution</span>
+                  <iconify-icon icon="material-symbols:arrow-forward-ios-rounded" class="solution-icon"></iconify-icon>
+
+                </div>
+              </div>
+              <div class="nav-dropdown__right-side">
+                <div class="navigation-dropdown__image">
+                  <img src="./img/solutions.png" alt="" class="nav-img">
+                </div>
+                <div class="nav-dropdown__right-side-text-title"> Customer success stories </div>
+                <p class="nav-dropdown__right-side-text"> See why leading companies around the world are choosing GitLab
+                </p>
+                <div class="nav-btn-more">
+                  <span class="text-bottom">Learn more</span>
+                  <iconify-icon icon="material-symbols:arrow-forward-ios-rounded" class="solution-icon"></iconify-icon>
+                </div>
+              </div>
+
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            Pricing
+            <div class="menu-item-icon">
+              <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" class="menu-hide-icon"></iconify-icon>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            Resources
+            <div class="menu-item-icon">
+              <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" class="menu-hide-icon"></iconify-icon>
+            </div>
+            <div class="nav-dropdown-list">
+              <div class="nav-dropdown__left-side">
+                <div class="nav-dropdown__left-side__container">
+                  <div class="nav-dropdown-categories">
+                    <div class="nav-dropdown-cate-list">
+                      <div class="nav-dropdown-list-title">By use case</div>
+                      <div class="nav-dropdown-item">Digital transformation </div>
+                      <div class="nav-dropdown-item">Security and governance </div>
+                      <div class="nav-dropdown-item">Automated software delivery </div>
+                      <div class="nav-dropdown-item">Agile development </div>
+                      <div class="nav-dropdown-item">Cloud transformation </div>
+                    </div>
+                  </div>
+                  <div class="nav-dropdown-categories">
+                    <div class="nav-dropdown-cate-list">
+                      <div class="nav-dropdown-list-title">By use case</div>
+                      <div class="nav-dropdown-item">Digital transformation </div>
+                      <div class="nav-dropdown-item">Security and governance </div>
+                      <div class="nav-dropdown-item">Automated software delivery </div>
+                      <div class="nav-dropdown-item">Agile development </div>
+                      <div class="nav-dropdown-item">Cloud transformation </div>
+                    </div>
+                  </div>
+                  <div class="nav-dropdown-categories ">
+                    <div class="nav-dropdown-cate-list margin-bottom-nav-list">
+                      <div class="nav-dropdown-list-title">By company size</div>
+                      <div class="nav-dropdown-item">Enterprise</div>
+                      <div class="nav-dropdown-item">Small business </div>
+                    </div>
+                    <div class="nav-dropdown-cate-list ">
+                      <div class="nav-dropdown-list-title">By industry</div>
+                      <div class="nav-dropdown-item">Public sector</div>
+                      <div class="nav-dropdown-item">Education</div>
+                      <div class="nav-dropdown-item">Financial services</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-dropdown__left-side__bottom">
+                  <span class="text-bottom">View all solution</span>
+                  <iconify-icon icon="material-symbols:arrow-forward-ios-rounded" class="solution-icon"></iconify-icon>
+
+                </div>
+              </div>
+              <div class="nav-dropdown__right-side">
+                <div class="navigation-dropdown__image">
+                  <img src="./img/solutions.png" alt="" class="nav-img">
+                </div>
+                <div class="nav-dropdown__right-side-text-title"> Customer success stories </div>
+                <p class="nav-dropdown__right-side-text"> See why leading companies around the world are choosing GitLab
+                </p>
+                <div class="nav-btn-more">
+                  <span class="text-bottom">Learn more</span>
+                  <iconify-icon icon="material-symbols:arrow-forward-ios-rounded" class="solution-icon"></iconify-icon>
+                </div>
+              </div>
+
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            Company
+            <div class="menu-item-icon">
+              <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" class="menu-hide-icon"></iconify-icon>
+            </div>
+          </a>
+          <a href="#" class="menu-item">
+            Contact Us
+            <div class="menu-item-icon">
+              <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" class="menu-hide-icon"></iconify-icon>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="navbar__left-mobile">
+        <iconify-icon class="" width="20" height="20" icon="material-symbols:search-rounded"></iconify-icon>
+      </div>
+      <div class="navbar__middle">
+        <div class="logo">
+          <svg data-v-0d71b08a="" width="32" height="32" viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tanukiHomeTablet" data-v-2271f886="">
+            <title id="tanukiHomeTablet">GitLab home page</title>
+            <path
+              d="M31.4618 12.7787L31.417 12.6641L27.0667 1.31308C26.9783 1.09046 26.8218 0.90145 26.6197 0.773028C26.416 0.644476 26.1775 0.582308 25.937 0.595107C25.6965 0.607906 25.4659 0.695039 25.277 0.844481C25.0899 0.994513 24.955 1.1998 24.8915 1.43106L21.9503 10.4324H10.0509L7.10976 1.43106C7.04625 1.1998 6.91133 0.994513 6.72425 0.844481C6.53618 0.694035 6.30572 0.606246 6.06523 0.593431C5.82473 0.580616 5.58625 0.64342 5.38326 0.773028C5.18023 0.900924 5.02312 1.09005 4.9346 1.31308L0.579314 12.679L0.534448 12.792C-0.0907536 14.429 -0.167604 16.2247 0.315452 17.9091C0.798508 19.5935 1.81536 21.0756 3.21309 22.1324L3.22971 22.144L3.26793 22.1739L9.90306 27.1407L13.1832 29.625L15.1773 31.1354C15.4115 31.3124 15.6971 31.4082 15.9907 31.4082C16.2842 31.4082 16.5698 31.3124 16.8041 31.1354L18.7981 29.625L22.0799 27.1407L28.7533 22.144L28.7715 22.1307C30.174 21.0749 31.1949 19.5916 31.6802 17.9045C32.1656 16.2175 32.0889 14.4184 31.4618 12.7787Z"
+              fill="#E24329"></path>
+            <path
+              d="M31.462 12.7787L31.4172 12.6641C29.2955 13.1013 27.2962 14.0005 25.5614 15.2978L16.0083 22.5378C19.2652 25.0005 22.1001 27.1407 22.1001 27.1407L28.7734 22.144L28.7917 22.1307C30.1907 21.0723 31.2076 19.5877 31.6893 17.9009C32.171 16.214 32.0912 14.4163 31.462 12.7787Z"
+              fill="#FC6D26"></path>
+            <path
+              d="M9.9082 27.1407L13.1834 29.625L15.1774 31.1354C15.4117 31.3124 15.6972 31.4082 15.9908 31.4082C16.2844 31.4082 16.57 31.3124 16.8042 31.1354L18.7982 29.625L22.0801 27.1407C22.0801 27.1407 19.2452 25.0005 15.9883 22.5378L9.9082 27.1407Z"
+              fill="#FCA326"></path>
+            <path
+              d="M6.43513 15.3045C4.70076 14.0067 2.70123 13.108 0.579333 12.6724L0.534467 12.7854C-0.0923403 14.4232 -0.170036 16.2203 0.313079 17.9061C0.796194 19.5919 1.81396 21.0751 3.21311 22.1324L3.22973 22.144L3.26795 22.1739L9.90307 27.1407L16.0081 22.5378L6.43513 15.3045Z"
+              fill="#FC6D26"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="navbar__right">
+        <iconify-icon class="icon" width="20" height="20" icon="material-symbols:search-rounded"></iconify-icon>
+        <a href="#" class="btn">Get free trial</a>
+        <iconify-icon class="icon-after" width="20" height="20" icon="ri:user-3-line"></iconify-icon>
+        <iconify-icon class="icon-after" width="20" height="20" icon="material-symbols:search-rounded"></iconify-icon>
+        <iconify-icon class="icon-after" width="20" height="20" icon="fluent:line-horizontal-3-20-filled">
+        </iconify-icon>
+
+        <a href="#" class="login"> Sign in </a>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="container">
+      <div class="homepage_container">
+        <div class="slp_row">
+          <div class="slp-flex slp-align-items-center slp-col-md-6">
+            <div class="homepage-hero__title-column">
+              <h1 class="title slp-text-heading-bold">Software. Faster.</h1>
+              <h2 class="subtitle slp-text-body1">
+                From planning to production, GitLab brings teams together to
+                shorten cycle times, reduce costs, strengthen security, and
+                increase developer productivity.
+              </h2>
+              <div class="slp-mb-16 slp-mt-s24">
+                <a href="#" class="slp-btn slp-mr-8 slp-btn-primary">Get tree trial</a>
+                <button type="button" class="slp-btn slp-btn-tertiary">
+                  What is GitLab?
+                  <img src="img/icon1.svg" />
+                </button>
               </div>
             </div>
-            <!-- <div
+          </div>
+          <div class="homepage-hero_media-column slp-flex slp-align-items-center slp-col-md-6">
+            <div class="card">
+              <p class="desktop slp-text-heading5-bold">
+                DevSecOps platform
+              </p>
+              <div class="card-img">
+                <div class="card-img__image">
+                  <img src="/img/h1.png" alt="Brand img" />
+                </div>
+                <div class="card-img__image">
+                  <img src="/img/h1_2.png" alt="Brand img" />
+                </div>
+                <div class="card-img__image">
+                  <img src="/img/h1_3.png" alt="Brand img" />
+                </div>
+              </div>
+              <div class="progressbar__container">
+                <div class="progressbar slp-mr-24">
+                  <div class="progressbar__time active"></div>
+                </div>
+                <div class="progressbar slp-mr-24">
+                  <div class="progressbar__time "></div>
+                </div>
+                <div class="progressbar slp-mr-24">
+                  <div class="progressbar__time "></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div
               class="modal__backdrop modal__backdrop--light"
               style="display: none"
             >
@@ -171,410 +281,432 @@
                   </button>
                 </header>
               </div> -->
-            </div>
-            <div class="customer-logos">
-              <div class="customer-logos__companies slp-flex">
-                <h2 class="slp-my-24 customer-logos__trusted-by slp-text-heading5">"Trusted By"</h2>
-                <a href="#">
-                  <img src="/img/icon2.svg">
-                </a>
-                <a href="#">
-                  <img src="img/icon3.svg">
-                </a>
-                <a href="#">
-                  <img src="img/icon4.svg">
-                </a>
-                <a href="#">
-                  <img src="img/icon5.svg">
-                </a>
-                <a href="#">
-                  <img src="img/icon6.svg">
-                </a>
-                <a href="#">
-                  <img src="img/icon7.svg">
-                </a>
-              </div>
-            </div>
+        </div>
+        <div class="customer-logos">
+          <div class="customer-logos__companies slp-flex">
+            <h2 class="slp-my-24 customer-logos__trusted-by slp-text-heading5">"Trusted By"</h2>
+            <a href="#">
+              <img src="/img/icon2.svg">
+            </a>
+            <a href="#">
+              <img src="img/icon3.svg">
+            </a>
+            <a href="#">
+              <img src="img/icon4.svg">
+            </a>
+            <a href="#">
+              <img src="img/icon5.svg">
+            </a>
+            <a href="#">
+              <img src="img/icon6.svg">
+            </a>
+            <a href="#">
+              <img src="img/icon7.svg">
+            </a>
+          </div>
+        </div>
 
-          </div>
-        </div>
-        <div class="slp-partial-charcoal-background wrapper">
-          <div class="container">
-            <div class="featured-content">
-              <a href="#" class="featured-content__card">
-                <div class="featured-content__text">
-                  <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                  <h3 class="slp-mb-8 slp-text-heading5-bold">Get started with Gitlab</h3>
-                  <p class="slp-mb-46 decription slp-text-body2">New to GitLab? Explore these resources to help you get the most out of GitLab and know what to expect along the way.</p>
-                
-                <div>
-                  <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
-                    <span class="slp-text-body1-bold">Explore resources</span>
-                  </button>
-                </div>
-              </div>
-              </a>
-              <a href="#" class="featured-content__card">
-                <div class="featured-content__text">
-                  <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                  <h3 class="slp-mb-8 slp-text-heading5-bold">2022 Global DevSecOps Survey</h3>
-                  <p class="slp-mb-46 decription slp-text-body2">See what we learn from over 5,000 DevOps professionals about automation, security, AI,and more</p>
-                  <div>
-                    <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
-                      <span class="slp-text-body1-bold">Read the survey</span>
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="featured-content__card">
-                <div class="featured-content__text">
-                  <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                  <h3 class="slp-mb-8 slp-text-heading5-bold">See what you could save</h3>
-                  <p class="slp-mb-46 decription slp-text-body2">Calculate the cost of your current toolchain and how much your organization could you save by switching to the One DevOps Platform </p>
-                  <div>
-                    <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
-                      <span class="slp-text-body1-bold">Try the calculator</span>
-                    </button>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="quotes-carousel">
-            <div class="container">
+      </div>
+    </div>
+    <div class="slp-partial-charcoal-background wrapper">
+      <div class="container">
+        <div class="featured-content">
+          <a href="#" class="featured-content__card">
+            <div class="featured-content__text">
+              <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
+              <h3 class="slp-mb-8 slp-text-heading5-bold">Get started with Gitlab</h3>
+              <p class="slp-mb-46 decription slp-text-body2">New to GitLab? Explore these resources to help you get the
+                most out of GitLab and know what to expect along the way.</p>
+
               <div>
-                <div class="quotes-carousel__header">
-                  <h2 class="slp-text-heading2-bold">Team do more with GitLab</h2>
-                  <a href="#" class="slp-btn slp-btn-tertiary">Read our case studies</a>
-                </div>
-                <div class="carousel">
-                  <div class="carousel__wrapper">
-                    <div class="carousel__content" style="transform: translateX(0px); transition: none 0s ease 0s">
-                      <a class="case-study-quote__link">
-                        <div class="slp-row case-study-quote logo">
-                          <div class="case-study-quote__main-img slp-col-md-3">
-                            <img src="/img/icon7.svg" width="250px" height="80px">
-                          </div>
-                          <div class="slp-col-md-8">
-                            <div class="case-study-quote__title-img"></div>
-                            <p class="case-study-quote__body slp-text-quotes">
-                              "We have an expression at UBS, ‘all developers wait at the same speed,’ so anything we can do to reduce their waiting time is value added.
-                               And GitLab allows us to have that integrated experience. Our developers should be able to build cloud-native applications on a cloud-native
-                                platform and have the best-in-class developer experience. That was our goal."</p>
-                            <p class="case-study-quote__author slp-text-body3-bold">- Rick Carey Group Chief Technology Officer</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="quotes-caurosel__footer">
-                  <span class="slp-text-body1">01 - 04</span>
-                </div>
+                <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
+                  <span class="slp-text-body1-bold">Explore resources</span>
+                </button>
               </div>
             </div>
-          </div>
-          </div>
+          </a>
+          <a href="#" class="featured-content__card">
+            <div class="featured-content__text">
+              <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
+              <h3 class="slp-mb-8 slp-text-heading5-bold">2022 Global DevSecOps Survey</h3>
+              <p class="slp-mb-46 decription slp-text-body2">See what we learn from over 5,000 DevOps professionals
+                about automation, security, AI,and more</p>
+              <div>
+                <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
+                  <span class="slp-text-body1-bold">Read the survey</span>
+                </button>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="featured-content__card">
+            <div class="featured-content__text">
+              <div role="img" class="slp-icon slp-mb-16 icon slp-icon--size-md slp-icon--color-color-text-300"></div>
+              <h3 class="slp-mb-8 slp-text-heading5-bold">See what you could save</h3>
+              <p class="slp-mb-46 decription slp-text-body2">Calculate the cost of your current toolchain and how much
+                your organization could you save by switching to the One DevOps Platform </p>
+              <div>
+                <button type="button" class="slp-btn featured-content__link slp-btn-tertiary">
+                  <span class="slp-text-body1-bold">Try the calculator</span>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="quotes-carousel">
+        <div class="container">
           <div>
-              <div class="solutions-container">
-                <div class="container solutions-container__container">
-                  <div class="slp-row solutions-container__header">
-                    <h2 class="slp-text-heading2-bold" style="margin-top: 50px">One platform, one team</h2>
-                    <img src="/img/h2.png" class="slp-my-48">
-                    <div class="solutions-container__text-container">
-                      <p class="slp-text-body1-bold">Whether you're starting by integrating a few point solutions,
-                         or simplifying your entire toolchain, now you can do it as one team in one platform. 
-                         Collaborating from planning to production across one platform, with security built-in.
-                      </p>
+            <div class="quotes-carousel__header">
+              <h2 class="slp-text-heading2-bold">Team do more with GitLab</h2>
+              <a href="#" class="slp-btn slp-btn-tertiary">Read our case studies</a>
+            </div>
+            <div class="carousel">
+              <div class="carousel__wrapper">
+                <div class="carousel__content" style="transform: translateX(0px); transition: none 0s ease 0s">
+                  <a class="case-study-quote__link">
+                    <div class="slp-row case-study-quote logo">
+                      <div class="case-study-quote__main-img slp-col-md-3">
+                        <img src="/img/icon7.svg" width="250px" height="80px">
+                      </div>
+                      <div class="slp-col-md-8">
+                        <div class="case-study-quote__title-img"></div>
+                        <p class="case-study-quote__body slp-text-quotes">
+                          "We have an expression at UBS, ‘all developers wait at the same speed,’ so anything we can do
+                          to reduce their waiting time is value added.
+                          And GitLab allows us to have that integrated experience. Our developers should be able to
+                          build cloud-native applications on a cloud-native
+                          platform and have the best-in-class developer experience. That was our goal."</p>
+                        <p class="case-study-quote__author slp-text-body3-bold">- Rick Carey Group Chief Technology
+                          Officer</p>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
-            <div>
-              <div id="solutions-block" class="solutions-block">
-                <div class="container solutions-block__container">
-                  <h2 class="slp-mb-96 slp-text-heading2-bold">The way DevOps should be</h2>
-                  <div class="scroll-solution">
-                    <div class="slp-col-md-1">
-                      <div class="progress-container">
-                        <div class="progress-bar"></div>
-                      </div>
-                    </div>
-                    <div class="scroll-solutions__col slp-align-items-center slp-col-md-11">
-                      <div class="solutions-item ">
-                        <div class="slp-row-1">
-                          <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
-                            <div class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                            <h3 class="slp-mb-16 slp-text-heading3-bold">Accelerate your digital transformation</h3>
-                            <p class="slp-text-body1">Reach your digital transformation objectives faster with a DevOps platform for your entire organization.
-                            </p>
-                            <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
-                              <span class="slp-flex slp-text-body2-bold">Learn more</span>
-                            </a>
-                          </div>
-                          <div class="slp-col-md-7">
-                            <div class="solutions-item__media aos-init aos-animate">
-                              <img src="img/h3.png" class="solutions-item__media__image">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="solutions-item ">
-                        <div class="slp-row-1">
-                          <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
-                            <div class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                            <h3 class="slp-mb-16 slp-text-heading3-bold">Deliver software faster</h3>
-                            <p class="slp-text-body1">Automate your software delivery process so you can deliver value faster and quality code more often.
-
-                            </p>
-                            <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
-                              <span class="slp-flex slp-text-body2-bold">Learn more</span>
-                            </a>
-                          </div>
-                          <div class="slp-col-md-7">
-                            <div class="solutions-item__media aos-init aos-animate">
-                              <img src="img/h4.png" class="solutions-item__media__image">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="solutions-item ">
-                        <div class="slp-row-1">
-                          <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
-                            <div class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                            <h3 class="slp-mb-16 slp-text-heading3-bold">Ensure compliance</h3>
-                            <p class="slp-text-body1">Simplify continuous software compliance by defining, enforcing and reporting on compliance in one platform.
-
-
-                            </p>
-                            <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
-                              <span class="slp-flex slp-text-body2-bold">Learn more</span>
-                            </a>
-                          </div>
-                          <div class="slp-col-md-7">
-                            <div class="solutions-item__media aos-init aos-animate">
-                              <img src="img/h5.png" class="solutions-item__media__image">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="solutions-item ">
-                        <div class="slp-row-1">
-                          <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
-                            <div class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                            <h3 class="slp-mb-16 slp-text-heading3-bold">Build in security</h3>
-                            <p class="slp-text-body1">Adopt DevSecOps practices with continuous software security assurance across every stage.
-      
-
-                            </p>
-                            <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
-                              <span class="slp-flex slp-text-body2-bold">Learn more</span>
-                            </a>
-                          </div>
-                          <div class="slp-col-md-7">
-                            <div class="solutions-item__media aos-init aos-animate">
-                              <img src="img/h6.png" class="solutions-item__media__image">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="solutions-item ">
-                        <div class="slp-row-1">
-                          <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
-                            <div class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300"></div>
-                            <h3 class="slp-mb-16 slp-text-heading3-bold">Improve collaboration and visibility</h3>
-                            <p class="slp-text-body1">Give everyone one platform to collaborate and see everything from planning to production.
-      
-
-                            </p>
-                            <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
-                              <span class="slp-flex slp-text-body2-bold">Learn more</span>
-                            </a>
-                          </div>
-                          <div class="slp-col-md-7">
-                            <div class="solutions-item__media aos-init aos-animate">
-                              <img src="img/h7.png" class="solutions-item__media__image">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- con them scroll cho cac the nua, chua lam  -->
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="badges">
-              <div class="container">
-                <h2 class="slp-text-heading2-bold">
-                  GitLab is The DevSecOps Platform
-                </h2>
-                <div class="tablist">
-                  <button id="tab-leaders" type="button" class="selected">
-                    <img src="img/idon9.svg" width="24px" height="24px">
-                    <span>Leaders in DevOps</span>
-                  </button>
-                  <button id="tab-research" type="button" class>
-                    <img src="img/icon10.svg" width="24px" height="24px">
-                    <span>Industry Analys Research</span>
-                  </button>
-                </div>
-                <div class="tabpanel">
-                  <div class="tabpanel__content-wrapper">
-                    <div class="tabpanel__copy">
-                      <p>
-                        <strong>Our users have spoken</strong>
-                        <br>
-                        GitLab ranks as a G2 Leader across DevOps categories
-                      </p>
-                    </div>
-                    <a href="#" class="slp-btn cta desktop slp-btn-tertiary">Learn more</a>
-
-                  </div>
-                  <div class="badge-cards">
-                    <img src="img/L1.svg" width="96px" height="122px">
-                    <img src="img/L2.svg" width="96px" height="122px">
-                    <img src="img/L3.svg" width="96px" height="122px">
-                    <img src="img/L4.svg" width="96px" height="122px">
-                    <img src="img/L5.svg" width="96px" height="122px">
-                    <img src="img/L6.svg" width="96px" height="122px">
-                    <img src="img/L7.svg" width="96px" height="122px">
-                    <img src="img/L8.svg" width="96px" height="122px">
-                  </div>
-                  <a></a>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="container-1">
-                <div class="slp-row resources-block__header">
-                  <h2 class="slp-text-heading2-hold">Resources</h2>
-                  <a href="#" class="slp-btn slp-btn-tertiary">View all resources</a>
-                </div>
-                <div class="slp-row resources-block__cards">
-                  <div class="slp-mb-48 card slp-col-md-4">
-                    <a href="#" class="resources-block">
-                      <div class="resources-block__wrapper">
-                        <div class="resources-block__content-top">
-                          <div class="resources-block__icon slp-flex">
-                        
-                            <p class="resources-block__type slp-text-all-caps">Ebook</p>
-                          </div>
-                          <img src="img/v1.png" class="resources-block__image slp-my-24">
-                          <h3 class="slp-text-body1">Beginner's Guide to DevOps
-                          </h3>
-                        </div>
-                        <div class="resources-block__content-bottom">
-                          <div class="resource-block__link slp-text-button">Read more</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slp-mb-48 card slp-col-md-4">
-                    <a href="#" class="resources-block">
-                      <div class="resources-block__wrapper">
-                        <div class="resources-block__content-top">
-                          <div class="resources-block__icon slp-flex">
-                        
-                            <p class="resources-block__type slp-text-all-caps">Topic</p>
-                          </div>
-                          <img src="img/V2.png" class="resources-block__image slp-my-24">
-                          <h3 class="slp-text-body1">What is CI/CD?
-                          </h3>
-                        </div>
-                        <div class="resources-block__content-bottom">
-                          <div class="resource-block__link slp-text-button">Read more</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slp-mb-48 card slp-col-md-4">
-                    <a href="#" class="resources-block">
-                      <div class="resources-block__wrapper">
-                        <div class="resources-block__content-top">
-                          <div class="resources-block__icon slp-flex">
-                        
-                            <p class="resources-block__type slp-text-all-caps">Report</p>
-                          </div>
-                          <img src="img/v3.jpeg" class="resources-block__image slp-my-24">
-                          <h3 class="slp-text-body1">2022 Global DevSecOps Survey
-                          </h3>
-                        </div>
-                        <div class="resources-block__content-bottom">
-                          <div class="resource-block__link slp-text-button">Read more</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slp-mb-48 card slp-col-md-4">
-                    <a href="#" class="resources-block">
-                      <div class="resources-block__wrapper">
-                        <div class="resources-block__content-top">
-                          <div class="resources-block__icon slp-flex">
-                        
-                            <p class="resources-block__type slp-text-all-caps">BLOG POST</p>
-                          </div>
-                          <img src="img/v4.png" class="resources-block__image slp-my-24">
-                          <h3 class="slp-text-body1">Comply with NIST's secure software supply chain framework with GitLab
-            
-                          </h3>
-                        </div>
-                        <div class="resources-block__content-bottom">
-                          <div class="resource-block__link slp-text-button">Read more</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slp-mb-48 card slp-col-md-4">
-                    <a href="#" class="resources-block">
-                      <div class="resources-block__wrapper">
-                        <div class="resources-block__content-top">
-                          <div class="resources-block__icon slp-flex">
-                        
-                            <p class="resources-block__type slp-text-all-caps">PARTNERS</p>
-                          </div>
-                          <img src="img/v5.png" class="resources-block__image slp-my-24">
-                          <h3 class="slp-text-body1">Discover the benefits of GitLab on AWS
-                          </h3>
-                        </div>
-                        <div class="resources-block__content-bottom">
-                          <div class="resource-block__link slp-text-button">Read more</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slp-mb-48 card slp-col-md-4">
-                    <a href="#" class="resources-block">
-                      <div class="resources-block__wrapper">
-                        <div class="resources-block__content-top">
-                          <div class="resources-block__icon slp-flex">
-                        
-                            <p class="resources-block__type slp-text-all-caps">RELEASE</p>
-                          </div>
-                          <img src="img/v6.png" class="resources-block__image slp-my-24">
-                          <h3 class="slp-text-body1">GitLab 15.7 released with GitLab CLI and Browser-Based DAST GA
-            
-                          </h3>
-                        </div>
-                        <div class="resources-block__content-bottom">
-                          <div class="resource-block__link slp-text-button">Read more</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="quotes-caurosel__footer">
+              <span class="slp-text-body1">01 - 04</span>
             </div>
           </div>
-        
-    
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="solutions-container">
+        <div class="container solutions-container__container">
+          <div class="slp-row solutions-container__header">
+            <h2 class="slp-text-heading2-bold" style="margin-top: 50px">One platform, one team</h2>
+            <img src="/img/h2.png" class="slp-my-48">
+            <div class="solutions-container__text-container">
+              <p class="slp-text-body1-bold">Whether you're starting by integrating a few point solutions,
+                or simplifying your entire toolchain, now you can do it as one team in one platform.
+                Collaborating from planning to production across one platform, with security built-in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="solutions-block" class="solutions-block">
+        <div class="container solutions-block__container">
+          <h2 class="slp-mb-96 slp-text-heading2-bold">The way DevOps should be</h2>
+          <div class="scroll-solution">
+            <div class="slp-col-md-1">
+              <div class="progress-container">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+            <div class="scroll-solutions__col slp-align-items-center slp-col-md-11">
+              <div class="solutions-item ">
+                <div class="slp-row-1">
+                  <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
+                    <div
+                      class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300">
+                    </div>
+                    <h3 class="slp-mb-16 slp-text-heading3-bold">Accelerate your digital transformation</h3>
+                    <p class="slp-text-body1">Reach your digital transformation objectives faster with a DevOps platform
+                      for your entire organization.
+                    </p>
+                    <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
+                      <span class="slp-flex slp-text-body2-bold">Learn more</span>
+                    </a>
+                  </div>
+                  <div class="slp-col-md-7">
+                    <div class="solutions-item__media aos-init aos-animate">
+                      <img src="img/h3.png" class="solutions-item__media__image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="solutions-item ">
+                <div class="slp-row-1">
+                  <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
+                    <div
+                      class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300">
+                    </div>
+                    <h3 class="slp-mb-16 slp-text-heading3-bold">Deliver software faster</h3>
+                    <p class="slp-text-body1">Automate your software delivery process so you can deliver value faster
+                      and quality code more often.
+
+                    </p>
+                    <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
+                      <span class="slp-flex slp-text-body2-bold">Learn more</span>
+                    </a>
+                  </div>
+                  <div class="slp-col-md-7">
+                    <div class="solutions-item__media aos-init aos-animate">
+                      <img src="img/h4.png" class="solutions-item__media__image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="solutions-item ">
+                <div class="slp-row-1">
+                  <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
+                    <div
+                      class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300">
+                    </div>
+                    <h3 class="slp-mb-16 slp-text-heading3-bold">Ensure compliance</h3>
+                    <p class="slp-text-body1">Simplify continuous software compliance by defining, enforcing and
+                      reporting on compliance in one platform.
+
+
+                    </p>
+                    <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
+                      <span class="slp-flex slp-text-body2-bold">Learn more</span>
+                    </a>
+                  </div>
+                  <div class="slp-col-md-7">
+                    <div class="solutions-item__media aos-init aos-animate">
+                      <img src="img/h5.png" class="solutions-item__media__image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="solutions-item ">
+                <div class="slp-row-1">
+                  <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
+                    <div
+                      class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300">
+                    </div>
+                    <h3 class="slp-mb-16 slp-text-heading3-bold">Build in security</h3>
+                    <p class="slp-text-body1">Adopt DevSecOps practices with continuous software security assurance
+                      across every stage.
+
+
+                    </p>
+                    <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
+                      <span class="slp-flex slp-text-body2-bold">Learn more</span>
+                    </a>
+                  </div>
+                  <div class="slp-col-md-7">
+                    <div class="solutions-item__media aos-init aos-animate">
+                      <img src="img/h6.png" class="solutions-item__media__image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="solutions-item ">
+                <div class="slp-row-1">
+                  <div class="slp-pr-32 slp-pb-md-96 slp-pb-32 slp-col-md-6">
+                    <div
+                      class="slp-icon slp-mb-24 solution-item__icon slp-icon--size-md slp-icon--color-color-text-300">
+                    </div>
+                    <h3 class="slp-mb-16 slp-text-heading3-bold">Improve collaboration and visibility</h3>
+                    <p class="slp-text-body1">Give everyone one platform to collaborate and see everything from planning
+                      to production.
+
+
+                    </p>
+                    <a href="#" class="slp-btn slp-mt-32 learn-more slp-btn-tertiary">
+                      <span class="slp-flex slp-text-body2-bold">Learn more</span>
+                    </a>
+                  </div>
+                  <div class="slp-col-md-7">
+                    <div class="solutions-item__media aos-init aos-animate">
+                      <img src="img/h7.png" class="solutions-item__media__image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- con them scroll cho cac the nua, chua lam  -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="badges">
+      <div class="container">
+        <h2 class="slp-text-heading2-bold">
+          GitLab is The DevSecOps Platform
+        </h2>
+        <div class="tablist">
+          <button id="tab-leaders" type="button" class="selected">
+            <img src="img/idon9.svg" width="24px" height="24px">
+            <span>Leaders in DevOps</span>
+          </button>
+          <button id="tab-research" type="button" class>
+            <img src="img/icon10.svg" width="24px" height="24px">
+            <span>Industry Analys Research</span>
+          </button>
+        </div>
+        <div class="tabpanel">
+          <div class="tabpanel__content-wrapper">
+            <div class="tabpanel__copy">
+              <p>
+                <strong>Our users have spoken</strong>
+                <br>
+                GitLab ranks as a G2 Leader across DevOps categories
+              </p>
+            </div>
+            <a href="#" class="slp-btn cta desktop slp-btn-tertiary">Learn more</a>
+
+          </div>
+          <div class="badge-cards">
+            <img src="img/L1.svg" width="96px" height="122px">
+            <img src="img/L2.svg" width="96px" height="122px">
+            <img src="img/L3.svg" width="96px" height="122px">
+            <img src="img/L4.svg" width="96px" height="122px">
+            <img src="img/L5.svg" width="96px" height="122px">
+            <img src="img/L6.svg" width="96px" height="122px">
+            <img src="img/L7.svg" width="96px" height="122px">
+            <img src="img/L8.svg" width="96px" height="122px">
+          </div>
+          <a></a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container-1">
+        <div class="slp-row resources-block__header">
+          <h2 class="slp-text-heading2-hold">Resources</h2>
+          <a href="#" class="slp-btn slp-btn-tertiary">View all resources</a>
+        </div>
+        <div class="slp-row resources-block__cards">
+          <div class="slp-mb-48 card__rs slp-col-md-4">
+            <a href="#" class="resources-block">
+              <div class="resources-block__wrapper">
+                <div class="resources-block__content-top">
+                  <div class="resources-block__icon slp-flex">
+
+                    <p class="resources-block__type slp-text-all-caps">Ebook</p>
+                  </div>
+                  <img src="img/v1.png" class="resources-block__image slp-my-24">
+                  <h3 class="slp-text-body1">Beginner's Guide to DevOps
+                  </h3>
+                </div>
+                <div class="resources-block__content-bottom">
+                  <div class="resource-block__link slp-text-button">Read more</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="slp-mb-48 card__rs slp-col-md-4">
+            <a href="#" class="resources-block">
+              <div class="resources-block__wrapper">
+                <div class="resources-block__content-top">
+                  <div class="resources-block__icon slp-flex">
+
+                    <p class="resources-block__type slp-text-all-caps">Topic</p>
+                  </div>
+                  <img src="img/V2.png" class="resources-block__image slp-my-24">
+                  <h3 class="slp-text-body1">What is CI/CD?
+                  </h3>
+                </div>
+                <div class="resources-block__content-bottom">
+                  <div class="resource-block__link slp-text-button">Read more</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="slp-mb-48 card__rs slp-col-md-4">
+            <a href="#" class="resources-block">
+              <div class="resources-block__wrapper">
+                <div class="resources-block__content-top">
+                  <div class="resources-block__icon slp-flex">
+
+                    <p class="resources-block__type slp-text-all-caps">Report</p>
+                  </div>
+                  <img src="img/v3.jpeg" class="resources-block__image slp-my-24">
+                  <h3 class="slp-text-body1">2022 Global DevSecOps Survey
+                  </h3>
+                </div>
+                <div class="resources-block__content-bottom">
+                  <div class="resource-block__link slp-text-button">Read more</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="slp-mb-48 card__rs slp-col-md-4">
+            <a href="#" class="resources-block">
+              <div class="resources-block__wrapper">
+                <div class="resources-block__content-top">
+                  <div class="resources-block__icon slp-flex">
+
+                    <p class="resources-block__type slp-text-all-caps">BLOG POST</p>
+                  </div>
+                  <img src="img/v4.png" class="resources-block__image slp-my-24">
+                  <h3 class="slp-text-body1">Comply with NIST's secure software supply chain framework with GitLab
+
+                  </h3>
+                </div>
+                <div class="resources-block__content-bottom">
+                  <div class="resource-block__link slp-text-button">Read more</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="slp-mb-48 card__rs slp-col-md-4">
+            <a href="#" class="resources-block">
+              <div class="resources-block__wrapper">
+                <div class="resources-block__content-top">
+                  <div class="resources-block__icon slp-flex">
+
+                    <p class="resources-block__type slp-text-all-caps">PARTNERS</p>
+                  </div>
+                  <img src="img/v5.png" class="resources-block__image slp-my-24">
+                  <h3 class="slp-text-body1">Discover the benefits of GitLab on AWS
+                  </h3>
+                </div>
+                <div class="resources-block__content-bottom">
+                  <div class="resource-block__link slp-text-button">Read more</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="slp-mb-48 card__rs slp-col-md-4">
+            <a href="#" class="resources-block">
+              <div class="resources-block__wrapper">
+                <div class="resources-block__content-top">
+                  <div class="resources-block__icon slp-flex">
+
+                    <p class="resources-block__type slp-text-all-caps">RELEASE</p>
+                  </div>
+                  <img src="img/v6.png" class="resources-block__image slp-my-24">
+                  <h3 class="slp-text-body1">GitLab 15.7 released with GitLab CLI and Browser-Based DAST GA
+
+                  </h3>
+                </div>
+                <div class="resources-block__content-bottom">
+                  <div class="resource-block__link slp-text-button">Read more</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-  </body>
+
+  <script src="/style.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</body>
+
 </html>
