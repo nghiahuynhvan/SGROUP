@@ -1000,7 +1000,7 @@ strong {
   flex-basis: 0;
   flex-grow: 1;
 }
-/* sua cho mo rua ko sua gi ca, tai vi no bi an theo cai class card thoi */
+
 
 .resources-block__wrapper {
   display: flex;
@@ -1191,6 +1191,11 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, li, ol, p, pre, ul{
 .footer .source a {
   font-weight: 600;
   color: #fff;
+  text-decoration: underline;
+}
+
+li a:not(.slp-btn):hover,
+ p>a:not(.slp-btn):hover {
   text-decoration: underline;
 }
 
