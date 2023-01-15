@@ -19,3 +19,26 @@ setInterval(() => {
   current = (current + 1) % cardImg.length;
   cardImg[current].style.opacity = "1";
 }, 5000);
+
+const main = () => {
+
+
+  // handle search event
+  const searchOpenBtn = document.querySelector(".search-btn");
+  searchOpenBtn.addEventListener("click",() => {
+    const checkBoxOpenTag = document.querySelector(".checkbox-search-open")
+    if(checkBoxOpenTag.checked ) {
+      document.querySelector(".modal-search-tablet").style.display ="block";
+      document.querySelector('.check-search-btn').checked = false;
+    }
+  })
+  const checkCloseSearchTag = document.querySelector(".check-search-btn")
+  checkCloseSearchTag.addEventListener("click", () => {
+    if(checkCloseSearchTag.checked ) {
+      document.querySelector(".modal-search-tablet").style.display ="none";
+      document.querySelector(".search-btn").checked = false;
+    }
+  })
+}
+main();
+
