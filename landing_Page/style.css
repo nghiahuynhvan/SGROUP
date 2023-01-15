@@ -1511,3 +1511,6 @@ ul {
 .modal-search-tablet{
   display: none;
 }
+.search-btn{
+  display: none
+}

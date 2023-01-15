@@ -286,6 +286,7 @@
     .search-btn {
         position: relative;
         cursor: pointer;
+        display: block;
     }
 
     
