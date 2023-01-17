@@ -261,7 +261,9 @@ body {
 .icon-after {
   display: none;
 }
-
+.icon-afters{
+  display: none
+}
 @media (max-width: 1023px) {
   .menu {
     display: none;
