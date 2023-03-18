@@ -25,7 +25,13 @@ $(function()
 		name: "Nếu Anh Đi (Cover)",
 		url: "Musics/NeuAnhDi.mp3",
 		picture: ""
-	}];
+	},
+    {
+        artist: "No",
+		name: "Thằng điên (Cover)",
+		url: "Musics/ThangDienCover-FannyTranJMonstar-5908267.mp3",
+		picture: ""
+    }];
 	
 	function shuffle(a) {
 		var j, x, i;
