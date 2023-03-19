@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>Chơi cờ tướng với máy - Choi co tuong voi may</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="chơi cờ tướng với máy, choi co tuong voi may, cờ tướng hay, co tuong, game co tuong online, co tuong 2 nguoi, cờ tướng, chơi cờ tướng online, choi co tuong online, choi co tuong, chơi cờ tướng online, chơi cờ tướng, cotuong, xiangqi, xiang qi" />
+<meta property="article:tag" content="cờ tướng"/>
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cotuong.r.worldssl.net/img/img_desc_logo_game.png">
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#ff0028" />
+<meta name="description" content="Cùng chơi Cờ tướng với nhiều tính năng hấp dẫn như Cờ thế, Tạo phòng, Chơi với nhau, Chơi với máy (4 cấp độ: Mới chơi, Dễ, Bình thường và Khó) và nhất là không cần đăng ký! Trang chủ" />
+<meta property="og:title" content="Trang chủ - Chơi cờ tướng với máy - Choi co tuong voi may" />
+<meta property="og:description" content="Cùng chơi Cờ tướng với nhiều tính năng hấp dẫn như Cờ thế, Tạo phòng, Chơi với nhau, Chơi với máy (4 cấp độ: Mới chơi, Dễ, Bình thường và Khó) và nhất là không cần đăng ký!" />
+
+<meta charset="utf-8"/>
+<base href="/co_tuong/" target="_blank">
+<link rel="apple-touch-icon" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-iphone-game.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-ipad-game.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-iphone-retina-game.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-ipad-retina-game.png">
+<link rel="icon" sizes="32x32" href="https://cotuong.r.worldssl.net/img/favicon-32x32-game.png" /> 
+ <link rel="stylesheet" href="static/css/in-use.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+<link href="static/css/index.css?v=69" rel="stylesheet">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+
+</script>  </head>
+  <body class="home"  style="padding-top:0px;">
+    <nav class="site-header  navbar navbar-expand-lg bg-danger">
+      <a class="navbar-brand" href="#">Cờ tướng</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="/">Trang chủ <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/co_tuong">Cờ tướng</a>
+         </li>
+         
+       </ul>
+       <form class="form-inline my-2 my-lg-0">
+         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+       </form>
+     </div>
+   </nav> 
+ <main>
+      <div class="container-fluid game px-0" itemscope itemtype="http://schema.org/Game">
+        <div class="container p-3">
+          <audio id="nuoc-co">
+            <source src="https://cotuong.r.worldssl.net/sound/nuocCo.mp3" type="audio/mpeg">
+            <source src="https://cotuong.r.worldssl.net/sound/nuocCo.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+          <audio id="het-tran">
+            <source src="https://cotuong.r.worldssl.net/sound/hetTran.mp3" type="audio/mpeg">
+            <source src="https://cotuong.r.worldssl.net/sound/hetTran.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+                    <div id="ban-co" class="w-50 mx-auto"></div>
+         
+          <p class="w-100 text-center mt-2">
+            <span class="rounded d-none" id="game-over" data-toggle="tooltip" data-placement="top" data-original-title="Ấn 'Tạo phòng mới' để chơi ván khác nhé"><i class="fad fa-flag-checkered"></i> HẾT TRẬN</span>
+          </p>
+        
+         
+</div>
+          <div class="row">
+            <input type="hidden" name="FEN" id="FEN" />
+            <input type="hidden" name="piecesUrl" id="piecesUrl" value="static" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js" integrity="sha256-U1mGlmAJ9EtQbmI39+qR12ar8kk5Zm2zskTIUmwCS88=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blockadblock/3.2.1/blockadblock.min.js" integrity="sha256-3zU5Lr4nIt3K/BgGOQMduajtZcPV9elIM/23RDXRp3o=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha256-tSRROoGfGWTveRpDHFiWVz+UXt+xKNe90wwGn25lpw8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js" integrity="sha256-sfG8c9ILUB8EXQ5muswfjZsKICbRIJUG/kBogvvV5sY=" crossorigin="anonymous"></script>
+<script src="static/js/scripts.js"></script>
+<script src="static/js/manipulation.js"></script>
+<script src="static/js/xiangqiboard.js?v=7"></script>
+<script src="static/js/xiangqi.js?v=33"></script>
+<script>
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+var locale = {
+  OK: 'Đồng ý',
+  CONFIRM: 'Chấp nhận',
+  CANCEL: 'Hủy'
+};
+bootbox.addLocale('vi', locale);
+
+// $('#tao-phong').on('click', function() {
+//   bootbox.prompt({
+//     title: "Mời tạo mật khẩu cho Phòng:",
+//     required: true,
+//     locale: 'vi',
+//     centerVertical: true,
+//     buttons: {
+//       confirm: {
+//         className: 'btn-success'
+//       }
+//     },
+//     callback: function(password){
+//       $.ajax({
+//         type: "POST",
+//         url: 'http://co-tuong.herokuapp.com/api/createRoom',
+//         data: {
+//           'ma-phong': $('#tao-phong').attr('data-phong'),
+//           'FEN': 'rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR r - - 0 1',
+//           'pass': password
+//         },
+//         dataType: 'text'
+//       }).done(function() {
+//         $('#AdSenseModal').modal('show');
+//       });
+//     }
+//   });
+// });
+// $('#copy-url-red').on('click', function() {
+//   copyToClipboard('#url-red');
+//   selectText('#url-red')
+// });
+// $('#copy-url-black').on('click', function() {
+//   copyToClipboard('#url-black');
+//   selectText('#url-black')
+// });
+const nuocCo = document.getElementById("nuoc-co");
+const hetTran = document.getElementById("het-tran");
+
+$(function () {
+  if (!Modernizr.touch) {
+    $('[data-toggle="tooltip"]').tooltip();
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  }
+});
+
+var is_iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (is_iOS) {
+  document.addEventListener('touchstart touchend touchcancel touchmove', event => {
+    event.preventDefault();
+  }, {passive: false});
+}
+window.onload = () => {
+  'use strict';
+  if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker
+    .register('static/js/service-worker.js')
+    .then(function(reg) {
+      console.log("Yes, it did.");
+    }).catch(function(err) {
+      console.log("No it didn't. This happened:", err)
+    });
+  }
+}
+</script>
+
+<script>
+let board = null;
+let game = new Xiangqi();
+
+function removeGreySquares () {
+  $('#ban-co .square-2b8ce').removeClass('highlight');
+}
+
+function greySquare (square) {
+  let $square = $('#ban-co .square-' + square);
+
+  $square.addClass('highlight');
+}
+
+function onDragStart (source, piece, position, orientation) {
+  if (game.in_checkmate() === true || game.in_draw() === true || piece.search(/^b/) !== -1) {
+    return false;
+  }
+}
+
+function minimaxRoot(depth, game, isMaximisingPlayer) {
+  var newGameMoves = game.ugly_moves();
+  var bestMove = -9999;
+  var bestMoveFound;
+
+  for(var i = 0; i < newGameMoves.length; i++) {
+    var newGameMove = newGameMoves[i]
+    game.ugly_move(newGameMove);
+    var value = minimax(depth - 1, game, -10000, 10000, !isMaximisingPlayer);
+    game.undo();
+    if(value >= bestMove) {
+      bestMove = value;
+      bestMoveFound = newGameMove;
+    }
+  }
+  return bestMoveFound;
+}
+
+function minimax(depth, game, alpha, beta, isMaximisingPlayer) {
+  positionCount++;
+  if (depth === 0) {
+    return -evaluateBoard(game.board());
+  }
+
+  var newGameMoves = game.ugly_moves();
+
+  if (isMaximisingPlayer) {
+    var bestMove = -9999;
+    for (var i = 0; i < newGameMoves.length; i++) {
+      game.ugly_move(newGameMoves[i]);
+      bestMove = Math.max(bestMove, minimax(depth - 1, game, alpha, beta, !isMaximisingPlayer));
+      game.undo();
+      alpha = Math.max(alpha, bestMove);
+      if (beta <= alpha) {
+        return bestMove;
+      }
+    }
+    return bestMove;
+  } else {
+    var bestMove = 9999;
+    for (var i = 0; i < newGameMoves.length; i++) {
+      game.ugly_move(newGameMoves[i]);
+      bestMove = Math.min(bestMove, minimax(depth - 1, game, alpha, beta, !isMaximisingPlayer));
+      game.undo();
+      beta = Math.min(beta, bestMove);
+      if (beta <= alpha) {
+        return bestMove;
+      }
+    }
+    return bestMove;
+  }
+}
+
+function evaluateBoard(board) {
+  var totalEvaluation = 0;
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 9; j++) {
+      totalEvaluation = totalEvaluation + getPieceValue(board[i][j], i ,j);
+    }
+  }
+  return totalEvaluation;
+}
+
+function reverseArray(array) {
+  return array.slice().reverse();
+}
+
+var pEvalRed =
+[
+[10.0,  10.0,  10.0,  10.0,  10.0,  10.0,  10.0,  10.0, 10.0],
+[10.0,  10.0,  11.0,  15.0,  20.0,  15.0,  11.0,  10.0, 10.0],
+[8.0,  10.0,  11.0,  15.0,  15.0,  15.0,  11.0,  10.0, 8.0],
+[7.0,  9.0,  10.0,  11.0,  11.0,  11.0,  10.0,  9.0, 7.0],
+[6.0,  8.0,  9.0,  10.0,  10.0,  10.0,  9.0,  8.0, 6.0],
+[1.0,  2.0,  3.0,  4.0,  4.0,  4.0,  3.0,  2.0, 1.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0]
+];
+
+var pEvalBlack = reverseArray(pEvalRed);
+
+var rEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[-2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, -2.0],
+
+];
+
+var rEvalBlack = reverseArray(rEvalRed);
+
+var nEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  -2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  -2.0, 0.0],
+
+];
+
+var nEvalBlack = reverseArray(nEvalRed);
+
+var cEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var cEvalBlack = reverseArray(cEvalRed);
+
+var bEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var bEvalBlack = reverseArray(bEvalRed);
+
+var aEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var aEvalBlack = reverseArray(aEvalRed);
+
+var kEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var kEvalBlack = reverseArray(kEvalRed);
+
+function getPieceValue(piece, x, y) {
+  if (piece === null) {
+    return 0;
+  }
+  var getAbsoluteValue = function (piece, isRed, x ,y) {
+    if (piece.type === 'p') { //PAWN
+      return 15 + ( isRed ? pEvalRed[x][y] : pEvalBlack[x][y] );
+    } else if (piece.type === 'r') { //ROOK/CHARIOT
+      return 90 +( isRed ? rEvalRed[x][y] : rEvalBlack[x][y] );
+    } else if (piece.type === 'c') { //CANNON
+      return 45 +( isRed ? cEvalRed[x][y] : cEvalBlack[x][y] );
+    } else if (piece.type === 'n') {
+      return 40 +( isRed ? nEvalRed[x][y] : nEvalBlack[x][y] );
+    } else if (piece.type === 'b') {
+      return 20 +( isRed ? bEvalRed[x][y] : bEvalBlack[x][y] );
+    } else if (piece.type === 'a') {
+      return 20 +( isRed ? aEvalRed[x][y] : aEvalBlack[x][y] );
+    } else if (piece.type === 'k') {
+      return 900 +( isRed ? kEvalRed[x][y] : kEvalBlack[x][y] );
+    }
+    throw "Unknown piece type: " + piece.type;
+  };
+
+  var absoluteValue = getAbsoluteValue(piece, piece.color === 'r', x ,y);
+  return piece.color === 'r' ? absoluteValue : -absoluteValue;
+}
+
+function makeBestMove() {
+  var bestMove = getBestMove(game);
+  game.ugly_move(bestMove);
+  board.position(game.fen());
+  nuocCo.play();
+  updateStatus();
+}
+
+var positionCount;
+
+function getBestMove(game) {
+  updateStatus();
+  positionCount = 0;
+  var depth = 4;
+  var bestMove = minimaxRoot(depth, game, true);
+  return bestMove;
+}
+
+function makeRandomMove () {
+  let possibleMoves = game.moves();
+
+  // game over
+  if (possibleMoves.length === 0) return;
+
+  let randomIdx = Math.floor(Math.random() * possibleMoves.length);
+  game.move(possibleMoves[randomIdx]);
+  board.position(game.fen());
+  updateStatus();
+}
+
+function onDrop (source, target) {
+  // see if the move is legal
+  let move = game.move({
+    from: source,
+    to: target,
+    promotion: 'q' // NOTE: always promote to a queen for example simplicity
+  });
+
+  // illegal move
+  if (move === null) return 'snapback';
+  updateStatus();
+  // make random legal move for black
+  //window.setTimeout(makeRandomMove, 250);
+  window.setTimeout(makeBestMove, 250);
+}
+
+function onMouseoverSquare (square, piece) {
+  // get list of possible moves for this square
+  let moves = game.moves({
+    square: square,
+    verbose: true
+  });
+
+  // exit if there are no moves available for this square
+  if (moves.length === 0) return;
+
+  // highlight the square they moused over
+  greySquare(square);
+
+  // highlight the possible squares for this piece
+  for (let i = 0; i < moves.length; i++) {
+    greySquare(moves[i].to);
+  }
+}
+
+function onMouseoutSquare (square, piece) {
+  removeGreySquares();
+}
+// update the board position after the piece snap
+// for castling, en passant, pawn promotion
+function onSnapEnd () {
+  board.position(game.fen());
+  nuocCo.play();
+  updateStatus();
+}
+function updateStatus () {
+  var status = ''
+
+  var moveColor = 'Đỏ'
+  if (game.turn() === 'b') {
+    moveColor = 'Đen'
+  }
+
+  // checkmate?
+  if (game.in_checkmate()) {
+    status = moveColor + ' bị chiếu bí'
+  }
+
+  // draw?
+  else if (game.in_draw()) {
+    status = 'Hòa'
+  }
+
+  // game still on
+  else {
+    status = 'Tới lượt ' + moveColor + ' đi'
+
+    // check?
+    if (game.in_check()) {
+      status += ', ' + moveColor + ' đang bị chiếu'
+    }
+  }
+  if (game.turn() === 'r') {
+    $('#game-status').removeClass('black').addClass('red');
+  } else if (game.turn() === 'b') {
+    $('#game-status').removeClass('red').addClass('black');
+  }
+  $('#game-status').html(status);
+  $('#header-status').html(': '+status);
+  if (game.game_over()) {
+    hetTran.play();
+    $('#header-status').html(': '+status+' - Hết trận');
+    $('#game-over').removeClass('d-none').addClass('d-inline-block');
+  }
+}
+let config = {
+  draggable: true,
+  position: 'start',
+  onDragStart: onDragStart,
+  onDrop: onDrop,
+  onMouseoutSquare: onMouseoutSquare,
+  onMouseoverSquare: onMouseoverSquare,
+  onSnapEnd: onSnapEnd,
+  // pieceTheme: '/static/img/xiangqipieces/traditional/{piece}.svg'
+};
+board = Xiangqiboard('ban-co', config);
+updateStatus();
+$(document).ready(function() {
+  $('#FEN').val(game.fen());
+});
+$('#reset').on('click', function() {
+  board.position('rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR');
+  game.load('rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR r - - 0 1');
+  $('#game-status').removeClass('black').addClass('red');
+  updateStatus();
+  $('#game-over').removeClass('d-inline-block').addClass('d-none');
+});
+</script>
+                     
+                      </div>
+        </div>
+      </div>
+       </main>
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3 vcard">
+        <!-- <p class="mt-3"><i class="fal fa-copyright"></i> Bản quyền <a class="url fn h-card" target="_blank" href="https://www.phamduytung.com/">Phạm Duy Tùng</a></p> -->
+      </div>
+    
+  
+    
+    </div>
+  </div>
+</footer>
+<div class="modal fade" id="AdBlockModal" tabindex="-1" role="dialog" aria-label="AdBlock" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title">Phát hiện AdBlock</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Chắc chắn, phần mềm chặn quảng cáo thực hiện công việc tuyệt vời trong việc chặn quảng cáo, nhưng nó cũng chặn một số tính năng hữu ích và quan trọng của trang web của chúng tôi. Để có trải nghiệm trang web tốt nhất có thể, vui lòng dành chút thời gian để tắt AdBlocker của bạn.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="AdSenseModal" tabindex="-1" role="dialog" aria-label="AdSense" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title">Quảng cáo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$('.menu-toggle').on('click', function(){
+  if ($(this).hasClass('open')) {
+    $(this).removeClass('open').removeClass('close').addClass('close');
+  } else if ($(this).hasClass('close')) {
+    $(this).removeClass('close').removeClass('open').addClass('open');
+  }
+});
+// Function called if AdBlock is not detected
+function adBlockNotDetected() {
+//	alert('AdBlock is not enabled');
+}
+// Function called if AdBlock is detected
+function adBlockDetected() {
+	$('#AdBlockModal').modal();
+}
+$('#AdSenseModal').on('hide.bs.modal', function(e) {
+  window.location.href = $('#tao-phong').attr('data-url');
+})
+// Recommended audit because AdBlock lock the file 'blockadblock.js' 
+// If the file is not called, the variable does not exist 'blockAdBlock'
+// This means that AdBlock is present
+if(typeof blockAdBlock === 'undefined') {
+	adBlockDetected();
+} else {
+	blockAdBlock.onDetected(adBlockDetected);
+	blockAdBlock.onNotDetected(adBlockNotDetected);
+	// and|or
+	blockAdBlock.on(true, adBlockDetected);
+	blockAdBlock.on(false, adBlockNotDetected);
+	// and|or
+	blockAdBlock.on(true, adBlockDetected).onNotDetected(adBlockNotDetected);
+}
+
+// Change the options
+//blockAdBlock.setOption('checkOnLoad', false);
+// and|or
+//blockAdBlock.setOption({
+//	debug: true,
+//	checkOnLoad: false,
+//	resetOnEnd: false
+//});
+</script>
+
+
+
+<div style="    display: inline-block;
+height: 300px;
+width: 250px;
+position: fixed;
+top: 90px;
+right: 10px;
+z-index: 42;
+-webkit-box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+overflow: hidden;
+white-space: nowrap;
+-webkit-transition: opacity .3s 0s,visibility 0s .3s,background-color .3s 0s;
+transition: opacity .3s 0s,visibility 0s .3s,background-color .3s 0s;" >
+ 
+    <span class="d-inline-block rounded" id="game-status" style="width: 100%;
+    text-align: center;">Bắt đầu</span>
+ 
+   
+     
+      <div class="dropup mx-auto text-center">
+        
+      
+        <!-- <p class="w-100 text-center my-4">
+            <a id="tao-phong" data-phong="75adbbe72f7affe8e9596ffaa0d170cb" data-url="http://co-tuong.herokuapp.com/phong/75adbbe72f7affe8e9596ffaa0d170cb" class="btn btn-success btn-lg pulse"><i class="fad fa-plus-circle"></i> Tạo phòng mới</a>
+          </p> -->
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <p class="w-100 text-center mt-4">
+ 
+  
+  </p>
+</div>
+ </body>
+</html>

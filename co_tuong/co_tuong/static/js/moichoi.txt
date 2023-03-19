@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>Mới chơi - Chơi cờ tướng với máy - Choi co tuong voi may</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="chơi cờ tướng với máy, choi co tuong voi may, cờ tướng hay, co tuong, game co tuong online, co tuong 2 nguoi, cờ tướng, chơi cờ tướng online, choi co tuong online, choi co tuong, chơi cờ tướng online, chơi cờ tướng, cotuong, xiangqi, xiang qi" />
+<meta property="article:tag" content="cờ tướng"/>
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cotuong.r.worldssl.net/img/img_desc_logo_game.png">
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="theme-color" content="#ff0028" />
+<meta name="description" content="Cùng chơi Cờ tướng với nhiều tính năng hấp dẫn như Cờ thế, Tạo phòng, Chơi với nhau, Chơi với máy (4 cấp độ: Mới chơi, Dễ, Bình thường và Khó) và nhất là không cần đăng ký! Mới chơi" />
+<meta property="og:title" content="Mới chơi - Chơi cờ tướng với máy - Choi co tuong voi may" />
+<meta property="og:description" content="Cùng chơi Cờ tướng với nhiều tính năng hấp dẫn như Cờ thế, Tạo phòng, Chơi với nhau, Chơi với máy (4 cấp độ: Mới chơi, Dễ, Bình thường và Khó) và nhất là không cần đăng ký!" />
+<meta property="og:url" content="http://co-tuong.herokuapp.com/moi-choi" />
+<meta property="fb:app_id" content="279071963296709"/>
+<meta name="csrf-token" content="k6S7aEtsphATvXPKYsSlojUlNh9XHMTLKdo5lIOu">
+<meta charset="utf-8"/>
+<meta name="twitter:card" content="summary">
+<link rel="apple-touch-icon" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-iphone-game.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-ipad-game.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-iphone-retina-game.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://cotuong.r.worldssl.net/img/app-icons/apple-touch-icon-ipad-retina-game.png">
+<link rel="icon" sizes="32x32" href="https://cotuong.r.worldssl.net/img/favicon-32x32-game.png" />
+<link rel="stylesheet" href="http://co-tuong.herokuapp.com/css/fa/css/in-use.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha512-rO2SXEKBSICa/AfyhEK5ZqWFCOok1rcgPYfGOqtX35OyiraBg6Xa4NnBJwXgpIRoXeWjcAmcQniMhp22htDc6g==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/lumen/bootstrap.min.css" integrity="sha384-VMuWne6iwiifi8iEWNZMw8sDatgb6ntBpBIr67q0rZAyOQwfu/VKpnFntQrjxB5W" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+<link href="https://cotuong.r.worldssl.net/css/index.css?v=65" rel="stylesheet">
+<link rel="manifest" href="http://co-tuong.herokuapp.com/manifest.webmanifest?v=1">
+<link rel="canonical" href="http://co-tuong.herokuapp.com/moi-choi" />
+<link rel="alternate" hreflang="vi" href="http://co-tuong.herokuapp.com/moi-choi"/>
+<link rel="alternate" hreflang="en" href="http://co-tuong.herokuapp.com/newbie"/>
+<!-- <link rel="amphtml" href="http://co-tuong.herokuapp.com/amp/moi-choi" /> -->
+<script data-ad-client="ca-pub-3585118770961536" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158792011-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-158792011-1');
+</script>  </head>
+  <body class="home">
+    <header class="site-header shadow-lg fixed-top">
+  <div class="container mx-auto">
+    <div class="row align-items-center">
+      <a class="navbar-brand mr-auto my-0" href="http://co-tuong.herokuapp.com"><img src="http://co-tuong.herokuapp.com/img/app-icons/logo.png" class="xiangqi-logo" alt="xiangqi logo"><h1 class="d-inline" style="font-size: inherit !important;"><strong>Cờ tướng</strong></h1><span id="header-status"></span></a>
+      <div class="menu-toggle open" title="Trình đơn"></div>
+      <nav class="navbar py-0">
+        <ul class="nav navbar-nav">
+          <li class="pt-4">
+            <a class="home" href="http://co-tuong.herokuapp.com">Trang chủ</a>
+          </li>
+          <li class="pt-4">
+            <a class="room" href="http://co-tuong.herokuapp.com/danh-sach-phong">Danh sách phòng</a>
+          </li>
+          <li class="pt-4">
+            <a class="setup" href="http://co-tuong.herokuapp.com/co-the">Cờ thế</a>
+          </li>
+          <li class="pt-4">
+            <a class="about" href="http://co-tuong.herokuapp.com/gioi-thieu">Giới thiệu</a>
+          </li>
+          <li class="pt-4">
+            <a class="lang" href="http://co-tuong.herokuapp.com/newbie">English</a>
+          </li>
+          <li class="pt-4">
+            <a target="_blank" class="buy" href="https://www.codester.com/items/24523/dual-languages-xiangqi-game-with-ai-and-room-host?ref=tungpham"><i class="far fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>    <main>
+      <div class="container-fluid game px-0" itemscope itemtype="http://schema.org/Game">
+        <div class="container p-3">
+          <audio id="nuoc-co">
+            <source src="https://cotuong.r.worldssl.net/sound/nuocCo.mp3" type="audio/mpeg">
+            <source src="https://cotuong.r.worldssl.net/sound/nuocCo.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+          <audio id="het-tran">
+            <source src="https://cotuong.r.worldssl.net/sound/hetTran.mp3" type="audio/mpeg">
+            <source src="https://cotuong.r.worldssl.net/sound/hetTran.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+                    <div id="ban-co" class="w-50 mx-auto"></div>
+          <p class="w-100 text-center my-3">
+            <span class="d-inline-block rounded" id="game-status"></span>
+          </p>
+          <p class="w-100 text-center mt-2">
+            <span class="rounded d-none" id="game-over" data-toggle="tooltip" data-placement="top" data-original-title="Ấn 'Tạo phòng mới' để chơi ván khác nhé"><i class="fad fa-flag-checkered"></i> HẾT TRẬN</span>
+          </p>
+          <p class="w-100 text-center my-4">
+            <a id="tao-phong" data-phong="09e151826b6ca9e7eb174029df314d66" data-url="http://co-tuong.herokuapp.com/phong/09e151826b6ca9e7eb174029df314d66" class="btn btn-success btn-lg pulse"><i class="fad fa-plus-circle"></i> Tạo phòng mới</a>
+          </p>
+          <h3 class="text-center my-2">Đang chơi với máy</h3>
+<h4 class="text-center my-2">Cấp độ: Mới chơi</h4>
+<div class="dropup mx-auto text-center">
+  <button class="btn btn-lg btn-danger dropdown-toggle" type="button" id="levelDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fal fa-trophy"></i> Chọn cấp độ
+  </button>
+  <div class="dropdown-menu" aria-labelledby="levelDropdown">
+    <a class="dropdown-item" href="http://co-tuong.herokuapp.com/moi-choi">Mới chơi</a>
+    <a class="dropdown-item" href="http://co-tuong.herokuapp.com/de">Dễ</a>
+    <a class="dropdown-item" href="http://co-tuong.herokuapp.com/binh-thuong">Bình thường</a>
+    <a class="dropdown-item" href="http://co-tuong.herokuapp.com/kho">Khó</a>
+  </div>
+</div>
+          <div class="row">
+            <input type="hidden" name="FEN" id="FEN" />
+            <input type="hidden" name="piecesUrl" id="piecesUrl" value="http://co-tuong.herokuapp.com" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js" integrity="sha256-U1mGlmAJ9EtQbmI39+qR12ar8kk5Zm2zskTIUmwCS88=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blockadblock/3.2.1/blockadblock.min.js" integrity="sha256-3zU5Lr4nIt3K/BgGOQMduajtZcPV9elIM/23RDXRp3o=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha256-tSRROoGfGWTveRpDHFiWVz+UXt+xKNe90wwGn25lpw8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js" integrity="sha256-sfG8c9ILUB8EXQ5muswfjZsKICbRIJUG/kBogvvV5sY=" crossorigin="anonymous"></script>
+<script src="https://cotuong.r.worldssl.net/js/scripts.js"></script>
+<script src="https://cotuong.r.worldssl.net/js/manipulation.js"></script>
+<script src="https://cotuong.r.worldssl.net/js/xiangqiboard.js?v=7"></script>
+<script src="https://cotuong.r.worldssl.net/js/xiangqi.js?v=33"></script>
+<script>
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+var locale = {
+  OK: 'Đồng ý',
+  CONFIRM: 'Chấp nhận',
+  CANCEL: 'Hủy'
+};
+bootbox.addLocale('vi', locale);
+
+$('#tao-phong').on('click', function() {
+  bootbox.prompt({
+    title: "Mời tạo mật khẩu cho Phòng:",
+    required: true,
+    locale: 'vi',
+    centerVertical: true,
+    buttons: {
+      confirm: {
+        className: 'btn-success'
+      }
+    },
+    callback: function(password){
+      $.ajax({
+        type: "POST",
+        url: 'http://co-tuong.herokuapp.com/api/createRoom',
+        data: {
+          'ma-phong': $('#tao-phong').attr('data-phong'),
+          'FEN': 'rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR r - - 0 1',
+          'pass': password
+        },
+        dataType: 'text'
+      }).done(function() {
+        $('#AdSenseModal').modal('show');
+      });
+    }
+  });
+});
+$('#copy-url-red').on('click', function() {
+  copyToClipboard('#url-red');
+  selectText('#url-red')
+});
+$('#copy-url-black').on('click', function() {
+  copyToClipboard('#url-black');
+  selectText('#url-black')
+});
+const nuocCo = document.getElementById("nuoc-co");
+const hetTran = document.getElementById("het-tran");
+
+$(function () {
+  if (!Modernizr.touch) {
+    $('[data-toggle="tooltip"]').tooltip();
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  }
+});
+
+var is_iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (is_iOS) {
+  document.addEventListener('touchstart touchend touchcancel touchmove', event => {
+    event.preventDefault();
+  }, {passive: false});
+}
+window.onload = () => {
+  'use strict';
+  if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker
+    .register('http://co-tuong.herokuapp.com/serviceWorker.js')
+    .then(function(reg) {
+      console.log("Yes, it did.");
+    }).catch(function(err) {
+      console.log("No it didn't. This happened:", err)
+    });
+  }
+}
+</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e65ab6b19fb59d9"></script>            <p class="w-100 text-center mt-4">
+  <a class="w-25 btn btn-dark btn-lg" href="http://co-tuong.herokuapp.com/choi-voi-nhau"><i class="fad fa-user"></i> Chơi với nhau</a>
+  <a id="reset" class="w-25 btn btn-danger btn-lg"><i class="fad fa-redo-alt"></i> Chơi lại</a>
+</p>
+<script>
+let board = null;
+let game = new Xiangqi();
+
+function removeGreySquares () {
+  $('#ban-co .square-2b8ce').removeClass('highlight');
+}
+
+function greySquare (square) {
+  let $square = $('#ban-co .square-' + square);
+
+  $square.addClass('highlight');
+}
+
+function onDragStart (source, piece, position, orientation) {
+  if (game.in_checkmate() === true || game.in_draw() === true || piece.search(/^b/) !== -1) {
+    return false;
+  }
+}
+
+function minimaxRoot(depth, game, isMaximisingPlayer) {
+  var newGameMoves = game.ugly_moves();
+  var bestMove = -9999;
+  var bestMoveFound;
+
+  for(var i = 0; i < newGameMoves.length; i++) {
+    var newGameMove = newGameMoves[i]
+    game.ugly_move(newGameMove);
+    var value = minimax(depth - 1, game, -10000, 10000, !isMaximisingPlayer);
+    game.undo();
+    if(value >= bestMove) {
+      bestMove = value;
+      bestMoveFound = newGameMove;
+    }
+  }
+  return bestMoveFound;
+}
+
+function minimax(depth, game, alpha, beta, isMaximisingPlayer) {
+  positionCount++;
+  if (depth === 0) {
+    return -evaluateBoard(game.board());
+  }
+
+  var newGameMoves = game.ugly_moves();
+
+  if (isMaximisingPlayer) {
+    var bestMove = -9999;
+    for (var i = 0; i < newGameMoves.length; i++) {
+      game.ugly_move(newGameMoves[i]);
+      bestMove = Math.max(bestMove, minimax(depth - 1, game, alpha, beta, !isMaximisingPlayer));
+      game.undo();
+      alpha = Math.max(alpha, bestMove);
+      if (beta <= alpha) {
+        return bestMove;
+      }
+    }
+    return bestMove;
+  } else {
+    var bestMove = 9999;
+    for (var i = 0; i < newGameMoves.length; i++) {
+      game.ugly_move(newGameMoves[i]);
+      bestMove = Math.min(bestMove, minimax(depth - 1, game, alpha, beta, !isMaximisingPlayer));
+      game.undo();
+      beta = Math.min(beta, bestMove);
+      if (beta <= alpha) {
+        return bestMove;
+      }
+    }
+    return bestMove;
+  }
+}
+
+function evaluateBoard(board) {
+  var totalEvaluation = 0;
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 9; j++) {
+      totalEvaluation = totalEvaluation + getPieceValue(board[i][j], i ,j);
+    }
+  }
+  return totalEvaluation;
+}
+
+function reverseArray(array) {
+  return array.slice().reverse();
+}
+
+var pEvalRed =
+[
+[10.0,  10.0,  10.0,  10.0,  10.0,  10.0,  10.0,  10.0, 10.0],
+[10.0,  10.0,  11.0,  15.0,  20.0,  15.0,  11.0,  10.0, 10.0],
+[8.0,  10.0,  11.0,  15.0,  15.0,  15.0,  11.0,  10.0, 8.0],
+[7.0,  9.0,  10.0,  11.0,  11.0,  11.0,  10.0,  9.0, 7.0],
+[6.0,  8.0,  9.0,  10.0,  10.0,  10.0,  9.0,  8.0, 6.0],
+[1.0,  2.0,  3.0,  4.0,  4.0,  4.0,  3.0,  2.0, 1.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0]
+];
+
+var pEvalBlack = reverseArray(pEvalRed);
+
+var rEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[-2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, -2.0],
+
+];
+
+var rEvalBlack = reverseArray(rEvalRed);
+
+var nEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  -2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  -2.0, 0.0],
+
+];
+
+var nEvalBlack = reverseArray(nEvalRed);
+
+var cEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var cEvalBlack = reverseArray(cEvalRed);
+
+var bEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var bEvalBlack = reverseArray(bEvalRed);
+
+var aEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var aEvalBlack = reverseArray(aEvalRed);
+
+var kEvalRed =
+[
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+[0.0,  0.0,  0.0,  0.0,  2.0,  0.0,  0.0,  0.0, 0.0],
+
+];
+
+var kEvalBlack = reverseArray(kEvalRed);
+
+function getPieceValue(piece, x, y) {
+  if (piece === null) {
+    return 0;
+  }
+  var getAbsoluteValue = function (piece, isRed, x ,y) {
+    if (piece.type === 'p') { //PAWN
+      return 15 + ( isRed ? pEvalRed[x][y] : pEvalBlack[x][y] );
+    } else if (piece.type === 'r') { //ROOK/CHARIOT
+      return 90 +( isRed ? rEvalRed[x][y] : rEvalBlack[x][y] );
+    } else if (piece.type === 'c') { //CANNON
+      return 45 +( isRed ? cEvalRed[x][y] : cEvalBlack[x][y] );
+    } else if (piece.type === 'n') {
+      return 40 +( isRed ? nEvalRed[x][y] : nEvalBlack[x][y] );
+    } else if (piece.type === 'b') {
+      return 20 +( isRed ? bEvalRed[x][y] : bEvalBlack[x][y] );
+    } else if (piece.type === 'a') {
+      return 20 +( isRed ? aEvalRed[x][y] : aEvalBlack[x][y] );
+    } else if (piece.type === 'k') {
+      return 900 +( isRed ? kEvalRed[x][y] : kEvalBlack[x][y] );
+    }
+    throw "Unknown piece type: " + piece.type;
+  };
+
+  var absoluteValue = getAbsoluteValue(piece, piece.color === 'r', x ,y);
+  return piece.color === 'r' ? absoluteValue : -absoluteValue;
+}
+
+function makeBestMove() {
+  var bestMove = getBestMove(game);
+  game.ugly_move(bestMove);
+  board.position(game.fen());
+  nuocCo.play();
+  updateStatus();
+}
+
+var positionCount;
+function getBestMove(game) {
+  updateStatus();
+  positionCount = 0;
+  var depth = 1;
+  var bestMove = minimaxRoot(depth, game, true);
+  return bestMove;
+}
+
+function makeRandomMove () {
+  let possibleMoves = game.moves();
+
+  // game over
+  if (possibleMoves.length === 0) return;
+
+  let randomIdx = Math.floor(Math.random() * possibleMoves.length);
+  game.move(possibleMoves[randomIdx]);
+  board.position(game.fen());
+  updateStatus();
+}
+
+function onDrop (source, target) {
+  // see if the move is legal
+  let move = game.move({
+    from: source,
+    to: target,
+    promotion: 'q' // NOTE: always promote to a queen for example simplicity
+  });
+
+  // illegal move
+  if (move === null) return 'snapback';
+  updateStatus();
+  // make random legal move for black
+  //window.setTimeout(makeRandomMove, 250);
+  window.setTimeout(makeBestMove, 250);
+}
+
+function onMouseoverSquare (square, piece) {
+  // get list of possible moves for this square
+  let moves = game.moves({
+    square: square,
+    verbose: true
+  });
+
+  // exit if there are no moves available for this square
+  if (moves.length === 0) return;
+
+  // highlight the square they moused over
+  greySquare(square);
+
+  // highlight the possible squares for this piece
+  for (let i = 0; i < moves.length; i++) {
+    greySquare(moves[i].to);
+  }
+}
+
+function onMouseoutSquare (square, piece) {
+  removeGreySquares();
+}
+// update the board position after the piece snap
+// for castling, en passant, pawn promotion
+function onSnapEnd () {
+  board.position(game.fen());
+  nuocCo.play();
+  updateStatus();
+}
+function updateStatus () {
+  var status = ''
+
+  var moveColor = 'Đỏ'
+  if (game.turn() === 'b') {
+    moveColor = 'Đen'
+  }
+
+  // checkmate?
+  if (game.in_checkmate()) {
+    status = moveColor + ' bị chiếu bí'
+  }
+
+  // draw?
+  else if (game.in_draw()) {
+    status = 'Hòa'
+  }
+
+  // game still on
+  else {
+    status = 'Tới lượt ' + moveColor + ' đi'
+
+    // check?
+    if (game.in_check()) {
+      status += ', ' + moveColor + ' đang bị chiếu'
+    }
+  }
+  if (game.turn() === 'r') {
+    $('#game-status').removeClass('black').addClass('red');
+  } else if (game.turn() === 'b') {
+    $('#game-status').removeClass('red').addClass('black');
+  }
+  $('#game-status').html(status);
+  $('#header-status').html(': '+status);
+  if (game.game_over()) {
+    hetTran.play();
+    $('#header-status').html(': '+status+' - Hết trận');
+    $('#game-over').removeClass('d-none').addClass('d-inline-block');
+  }
+}
+let config = {
+  draggable: true,
+  position: 'start',
+  onDragStart: onDragStart,
+  onDrop: onDrop,
+  onMouseoutSquare: onMouseoutSquare,
+  onMouseoverSquare: onMouseoverSquare,
+  onSnapEnd: onSnapEnd,
+  //pieceTheme: '/static/img/xiangqipieces/traditional/{piece}.svg'
+};
+board = Xiangqiboard('ban-co', config);
+updateStatus();
+$(document).ready(function() {
+  $('#FEN').val(game.fen());
+});
+$('#reset').on('click', function() {
+  board.position('rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR');
+  game.load('rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR r - - 0 1');
+  $('#game-status').removeClass('black').addClass('red');
+  updateStatus();
+  $('#game-over').removeClass('d-inline-block').addClass('d-none');
+});
+</script>
+                        <p class="w-100 text-center mt-2">
+              <a id="share-board" class="mx-auto btn btn-success btn-lg pulse py-2" href="http://co-tuong.herokuapp.com/chia-se"><i class="fad fa-share"></i> Chia sẻ bàn cờ</a>
+            </p>
+            <script>
+            $('#share-board').on('click', function(){
+              $(this).attr('href', $(this).attr('href') + '/' + game.fen());
+            });
+            </script>
+                      </div>
+        </div>
+      </div>
+      <div class="container-fluid about px-0 font-weight-bold">
+  <div class="container p-3 lead">
+    <h2 class="text-center my-4">Hướng dẫn</h2>
+    <div class="row font-weight-bold">
+      <p>Có 4 chế độ: Chơi với nhau, Chơi với máy, Chơi trong phòng, và Cờ thế</p>
+      <ol>
+        <li><u>Chơi với nhau:</u> Kì thủ ấn vào nút <a target="_blank" href="http://co-tuong.herokuapp.com/choi-voi-nhau">"CHƠI VỚI NHAU"</a> trên trang chủ và bắt đầu luyện tập với nhau. </li>
+        <li><u>Chơi với máy:</u> Kì thủ <strong><em>chơi cờ tướng với máy</em></strong> ngay trên trang chủ. Có 4 cấp độ: <a target="_blank" href="http://co-tuong.herokuapp.com/moi-choi">Mới chơi</a>, <a target="_blank" href="http://co-tuong.herokuapp.com/de">Dễ</a>, <a target="_blank" href="http://co-tuong.herokuapp.com/binh-thuong">Bình thường</a>, <a target="_blank" href="http://co-tuong.herokuapp.com/kho">Khó</a>.</li>
+        <li><u>Chơi trong phòng:</u> Kì thủ ấn vào nút "TẠO PHÒNG MỚI", mở một phòng mới với Mã phòng bất kỳ và tạo một Mật khẩu chỉ có bạn biết thôi, đồng thời có thể Mời bạn bè vào chơi qua đường link và chia sẻ mật khẩu cho bạn cùng chơi. Kì thủ cũng có thể vào trang <a target="_blank" href="http://co-tuong.herokuapp.com/danh-sach-phong">"Danh sách phòng"</a> để truy cập vào 1 phòng có sẵn. Trong trang này kì thủ có thể lựa chọn Quân Đỏ hoặc Quân Đen. Quân Đỏ đi trước.</li>
+        <li><u>Cờ thế:</u> Dành cho các kỳ thủ, người đã biết chơi cờ lão luyện. Kỳ thủ ấn vào nút <a target="_blank" href="http://co-tuong.herokuapp.com/co-the">"Cờ thế"</a> trên trang chủ, sau đó di chuyển và bày trận theo ý của mình, nhấn nút "CHỤP BÀN CỜ THẾ" và mời bạn bè cùng giải cờ thế.</li>
+      </ol>
+    </div>
+  </div>
+</div>      <div class="container-fluid adsense px-0 border-top">
+  <div class="container mx-auto p-3">
+    <div class="row w-100 mx-auto">
+      <div class="mb-4 col-12 px-0">
+        <!-- CO_res -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-3585118770961536"
+            data-ad-slot="7831723879"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+  </div>
+</div>      <div class="container-fluid comments px-0 border-top">
+  <div class="container mx-auto px-0">
+    <div class="row w-100 mx-auto p-3">
+      <h2 class="mb-4 w-100">Bình luận</h2>
+      <div id="fb-root"></div>
+      <script>
+      $(document).ready(function() {
+        $.ajax({
+          url: 'https://connect.facebook.net/vi_VN/sdk.js',
+          type: 'GET',
+          cache: true,
+          global: false,
+          dataType: 'script',
+          async: true
+        }).done(function(){
+          FB.init({
+            appId: '279071963296709',
+            cookie : true,
+            xfbml : true,
+            version : 'v7.0'
+          });
+        });
+      });
+      </script>
+      <div class="fb-login-button facebook_plugin" data-width="300" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div>
+      <div id="fb_like" class="fb-like facebook_plugin" data-width="300" data-href="" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+      <div id="fb_comments" class="fb-comments" data-href="" data-width="100%" data-numposts="12" data-colorscheme="light"></div>
+      <script>
+      $('#fb_like, #fb_comments').attr('data-href', 'http://co-tuong.herokuapp.com/moi-choi');
+      </script>
+    </div>
+  </div>
+</div>    </main>
+    <footer>
+  <div class="container">
+    <div class="row p-5">
+      <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3 vcard">
+        <p>Email liên hệ</p>
+        <a class="w-100 email" href="mailto:tung.42@gmail.com">tung.42@gmail.com</a>
+        <p class="mt-3"><i class="fal fa-copyright"></i> Bản quyền <a class="url fn h-card" target="_blank" href="https://tungpham42.info/">Phạm Tùng</a></p>
+      </div>
+      <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
+        <ul class="list-unstyled">
+          <li>
+            <a class="home" href="http://co-tuong.herokuapp.com">Trang chủ</a>
+          </li>
+          <li>
+            <a class="room" href="http://co-tuong.herokuapp.com/danh-sach-phong">Danh sách phòng</a>
+          </li>
+          <li>
+            <a class="setup" href="http://co-tuong.herokuapp.com/co-the">Cờ thế</a>
+          </li>
+          <li>
+            <a class="about" href="http://co-tuong.herokuapp.com/gioi-thieu">Giới thiệu</a>
+          </li>
+          <li>
+            <a class="lang" href="http://co-tuong.herokuapp.com/newbie">English</a>
+          </li>
+          <li>
+            <a target="_blank" class="buy" href="https://www.codester.com/items/24523/dual-languages-xiangqi-game-with-ai-and-room-host?ref=tungpham"><i class="far fa-shopping-cart"></i> MUA</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
+        <p>Chúng tôi trên mạng xã hội</p>
+        <a class="w-100 mr-2 display-4" target="_blank" href="https://www.facebook.com/CoTuongPage/"><i class="fab fa-facebook-square rounded"></i></a>
+        <a class="w-100 mr-2 display-4" target="_blank" href="https://www.linkedin.com/company/cotuong/"><i class="fab fa-linkedin rounded"></i></a>
+      </div>
+      <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
+        <p>Đã xác thực HTML5</p>
+        <a title="Valid HTML 5" class="w-100 mr-2 display-4" target="_blank" href="https://validator.w3.org/check?uri=referer">
+          <i class="fab fa-html5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="modal fade" id="AdBlockModal" tabindex="-1" role="dialog" aria-label="AdBlock" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title">Phát hiện AdBlock</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Chắc chắn, phần mềm chặn quảng cáo thực hiện công việc tuyệt vời trong việc chặn quảng cáo, nhưng nó cũng chặn một số tính năng hữu ích và quan trọng của trang web của chúng tôi. Để có trải nghiệm trang web tốt nhất có thể, vui lòng dành chút thời gian để tắt AdBlocker của bạn.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="AdSenseModal" tabindex="-1" role="dialog" aria-label="AdSense" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title">Quảng cáo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <!-- CO_300x300 -->
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:300px;height:300px"
+            data-ad-client="ca-pub-3585118770961536"
+            data-ad-slot="7625346255"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$('.menu-toggle').on('click', function(){
+  if ($(this).hasClass('open')) {
+    $(this).removeClass('open').removeClass('close').addClass('close');
+  } else if ($(this).hasClass('close')) {
+    $(this).removeClass('close').removeClass('open').addClass('open');
+  }
+});
+// Function called if AdBlock is not detected
+function adBlockNotDetected() {
+//	alert('AdBlock is not enabled');
+}
+// Function called if AdBlock is detected
+function adBlockDetected() {
+	$('#AdBlockModal').modal();
+}
+$('#AdSenseModal').on('hide.bs.modal', function(e) {
+  window.location.href = $('#tao-phong').attr('data-url');
+})
+// Recommended audit because AdBlock lock the file 'blockadblock.js' 
+// If the file is not called, the variable does not exist 'blockAdBlock'
+// This means that AdBlock is present
+if(typeof blockAdBlock === 'undefined') {
+	adBlockDetected();
+} else {
+	blockAdBlock.onDetected(adBlockDetected);
+	blockAdBlock.onNotDetected(adBlockNotDetected);
+	// and|or
+	blockAdBlock.on(true, adBlockDetected);
+	blockAdBlock.on(false, adBlockNotDetected);
+	// and|or
+	blockAdBlock.on(true, adBlockDetected).onNotDetected(adBlockNotDetected);
+}
+
+// Change the options
+//blockAdBlock.setOption('checkOnLoad', false);
+// and|or
+//blockAdBlock.setOption({
+//	debug: true,
+//	checkOnLoad: false,
+//	resetOnEnd: false
+//});
+</script>
+<a href="#0" class="cd-top js-cd-top rounded" style="background-image: url(http://co-tuong.herokuapp.com/img/cd-top-arrow.svg);">Top</a>
+<script src="http://co-tuong.herokuapp.com/js/to-top.js"></script>  </body>
+</html>
