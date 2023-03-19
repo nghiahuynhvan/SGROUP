@@ -21,9 +21,9 @@ $(function()
 	var playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
 	
 	var songs = [{
-		artist: "Dig Didzay",
-		name: "Nếu Anh Đi (Cover)",
-		url: "Musics/NeuAnhDi.mp3",
+		artist: "Lee juck",
+		name: "Don't Worry",
+		url: "Musics/DontWorryBabyReply1988OST-LeeJuck-4172404.mp3",
 		picture: ""
 	},
     {
