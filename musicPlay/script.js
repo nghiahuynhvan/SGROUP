@@ -31,7 +31,27 @@ $(function()
 		name: "Thằng điên (Cover)",
 		url: "Musics/ThangDienCover-FannyTranJMonstar-5908267.mp3",
 		picture: ""
-    }];
+    },
+    {
+        artist: "Táo",
+		name: "Red rum ",
+		url: "Musics/RedRum-Tao-7217485.mp3",
+		picture: ""
+    },
+
+    {
+        artist: "Chillies",
+		name: "Qua Khung cửa sổ ",
+		url: "Musics/TaiNhacHay.Biz - Qua Khung Cửa Sổ (Làn Sóng Xanh Party 2020).mp3",
+		picture: ""
+    },
+    {
+        artist: "Ngọt ",
+		name: "Thấy Chưa :)) (chưa thấy nghe CG)",
+		url: "Musics/TaiNhacHay.Biz - Thấy Chưa.mp3",
+		picture: ""
+    },
+    ];
 	
 	function shuffle(a) {
 		var j, x, i;
