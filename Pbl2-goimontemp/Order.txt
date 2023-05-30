@@ -1,0 +1,5 @@
+Bill1;2;Kh1;Pham Khac Luan;Hue;0901160604;2;A1;3;A2;4;
+Bill2;1;1;A1;2;
+Bill3;1;2;A1;2;A2;3;
+Bill5;1;1;;2;
+Bill7;1;2;A1;2;A2;3;

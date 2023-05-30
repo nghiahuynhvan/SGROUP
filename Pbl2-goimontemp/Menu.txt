@@ -1,0 +1,3 @@
+A1;Ca chien;Dia;10000
+A2;Muc hap;Dia;20000
+A3;Ga Chien;Hop;20000
