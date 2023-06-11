@@ -40,5 +40,25 @@ const main = () => {
     }
   })
 }
+// window.addEventListener('scroll', function() {
+//   const progressContainer = document.querySelector('.progress-container');
+//   const progressBar = document.querySelector('.progress-bar');
+
+//   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//   const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+//   const windowHeight = document.documentElement.clientHeight || window.innerHeight;
+
+//   const progress = (scrollTop / (scrollHeight - windowHeight)) * 100;
+//   progressBar.style.height = progress + '%';
+
+//   // Tính toán vị trí của progressContainer
+//   const containerHeight = progressContainer.offsetHeight;
+//   const maxContainerScroll = scrollHeight - windowHeight - containerHeight;
+//   const containerScroll = (progress * maxContainerScroll) / 100;
+//   progressContainer.style.top = containerScroll + 'px';
+// });
+
+// window.addEventListener('scroll', updateProgressBar);
+
 main();
 

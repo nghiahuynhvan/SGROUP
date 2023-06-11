@@ -146,9 +146,13 @@ body {
 .text-bottom:hover~.solution-icon {
   transform: translateX(10px);
 }
+.slp-text-body1-bold:hover~.solution-icon{
+  transform: translateX(10px);
+  transition: transform 0.5s ease;
+}
 
 .solution-icon {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .nav-dropdown__right-side {
@@ -201,6 +205,7 @@ body {
   color: #171321;
   font-weight: 600;
 }
+
 
 
 .navbar__right {
@@ -636,6 +641,11 @@ a:not(.slp-btn) {
 .featured-content__text {
   flex-basis: 100%;
   margin: 30px;
+  /* position: relative; */
+}
+.button_bottom{
+  position :absolute;
+  bottom: 0;
 }
 
 /* .slp-text-heading5-bold {
@@ -649,9 +659,10 @@ a:not(.slp-btn) {
 }
 
 .slp-text-body2 {
-  font-size: 23px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 25px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .quotes-carousel {
@@ -808,6 +819,7 @@ a:not(.slp-btn) {
   line-height: 24px;
   font-weight: 550;
   float: right;
+  margin-right: 5px;
 }
 
 
@@ -853,19 +865,23 @@ a:not(.slp-btn) {
 }
 
 .solutions-block .progress-container {
-  width: 2px;
+  width: 3px;
   background: #e8e7eb;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
+  /* height: 10px;  */
+  /* width: 100%; */
+  /* overflow-y: scroll ; */
 }
 
 .solutions-block .progress-bar {
   position: absolute;
   background: #171321;
-  width: 2px;
-  height: 100%;
+  width: 3px;
+  height: 0%;
+  
 }
 
 .solutions-item {
@@ -1162,8 +1178,8 @@ strong {
 .footer .content {
   display: flex;
   margin-top: 48px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  /* justify-content: space-between;
+  flex-wrap: wrap; */
   grid-gap: 30px;
   gap: 30px;
 }
